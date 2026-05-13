@@ -32,9 +32,9 @@ title = "Crieur Perso Test 1"
 ## Chemin vers des templates dédiés
 ## Vous pouvez reprendre le template général base.html et d'autres sur le dépôt public du Crieur :
 ## https://gitlab.huma-num.fr/ecrinum/crieur/-/tree/main/crieur/templates
-templates-path = "templates"
+# templates-path = "templates"
 ## Chemin vers des statics dédiées (CSS, images, polices, scripts, ...). 
-statics-path = "statics"
+# statics-path = "statics"
 ## Chemin vers un style CSL particulier de traitement des références bibliographiques (expérimental).
 # csl-path = ""
 

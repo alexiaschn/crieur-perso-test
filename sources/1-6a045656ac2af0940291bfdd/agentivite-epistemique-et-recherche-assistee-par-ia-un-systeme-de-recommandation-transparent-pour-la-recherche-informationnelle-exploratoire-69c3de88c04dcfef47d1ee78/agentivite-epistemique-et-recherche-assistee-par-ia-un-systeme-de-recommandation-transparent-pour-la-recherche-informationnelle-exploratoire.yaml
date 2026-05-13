@@ -1,0 +1,124 @@
+---
+'@version': '1.0'
+abstract:
+- lang: fr
+  text: 'Information retrieval tools in academic contexts filter and rank what
+
+    researchers read and cite, thereby influencing scientific innovation and
+
+    the citation dynamics that shape research. Current "AI research
+
+    assistants" rely on a natural language querying strategy interpreted by
+
+    a large language model ; this paradigm, which appears to attract the
+
+    majority of information retrieval resources today, raises questions
+
+    about the epistemological impact of interpretations performed by tools
+
+    whose black-box effect is well-documented. This paper presents a
+
+    recommender system appended to the specialized scientific search engine
+
+    Isidore, tool designed as a concrete alternative to natural language
+
+    querying. First, we will present the functionalities of the recommender
+
+    system developed in this project: constructing a query through iterative
+
+    interactions involving terms and definitions using the IEML language;
+
+    comparing result lists displayed side-by-side from the user-constructed
+
+    query and the same query "augmented" by an LLM. Second, we will present
+
+    the evaluation of the semantic parsing into IEML performed by an LLM on
+
+    a corpus of 360 terms, as well as the results of a small sample user
+
+    study.
+
+    '
+  text_f: 'Information retrieval tools in academic contexts filter and rank what
+
+    researchers read and cite, thereby influencing scientific innovation and
+
+    the citation dynamics that shape research. Current "AI research
+
+    assistants" rely on a natural language querying strategy interpreted by
+
+    a large language model ; this paradigm, which appears to attract the
+
+    majority of information retrieval resources today, raises questions
+
+    about the epistemological impact of interpretations performed by tools
+
+    whose black-box effect is well-documented. This paper presents a
+
+    recommender system appended to the specialized scientific search engine
+
+    Isidore, tool designed as a concrete alternative to natural language
+
+    querying. First, we will present the functionalities of the recommender
+
+    system developed in this project: constructing a query through iterative
+
+    interactions involving terms and definitions using the IEML language;
+
+    comparing result lists displayed side-by-side from the user-constructed
+
+    query and the same query "augmented" by an LLM. Second, we will present
+
+    the evaluation of the semantic parsing into IEML performed by an LLM on
+
+    a corpus of 360 terms, as well as the results of a small sample user
+
+    study.
+
+    '
+acknowledgements: "\nLe pr\xE9sent projet a \xE9t\xE9 financ\xE9 par une subvention\
+  \ du programme de\npartenariat du Conseil de recherches en sciences humaines pour\
+  \ le projet\nRevue 3.0 : \xC9crire, Transmettre, D\xE9couvrir.\n\n"
+authors:
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Alexia
+  orcid: https://orcid.org/0009-0000-0651-9792
+  surname: Schneider
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Marcello
+  orcid: https://orcid.org/0000-0001-6424-3229
+  surname: Vitali-Rosati
+- forname: Pierre
+  orcid: https://orcid.org/0000-0003-1599-221X
+  surname: "L\xE9vy"
+bibliography: agentivite-epistemique-et-recherche-assistee-par-ia-un-systeme-de-recommandation-transparent-pour-la-recherche-informationnelle-exploratoire.bib
+controlledKeywords: []
+date: 2026/05/13
+day: '13'
+director: []
+dossier: []
+funder: {}
+issueDirectors: []
+keywords:
+- lang: fr
+  list: "syst\xE8me de recommandation, recherche d'information, AI-research assistant,\
+    \ recherche exploratoire, recommender system, ai research assistant, exploratory\
+    \ search practices, ieml"
+  list_f: "syst\xE8me de recommandation, recherche d'information, AI-research assistant,\
+    \ recherche exploratoire, recommender system, ai research assistant, exploratory\
+    \ search practices, ieml"
+lang: fr
+month: '05'
+reviewers: []
+title: "Agentivit\xE9 \xE9pist\xE9mique et recherche assist\xE9e par IA : un syst\xE8\
+  me de recommandation transparent pour la recherche informationnelle exploratoire"
+title_f: "Agentivit\xE9 \xE9pist\xE9mique et recherche assist\xE9e par IA : un syst\xE8\
+  me de recommandation transparent pour la recherche informationnelle exploratoire"
+transcribers: []
+translatedTitle: []
+translationOf: []
+translator: []
+type: article
+typeArticle: []
+year: '2026'
+--- 

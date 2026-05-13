@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html><!-- This is a valid HTML5 document. -->
+<!-- Screen readers, SEO, extensions and so on. -->
+<html lang="fr">
+  <!-- Has to be within the first 1024 bytes, hence before the <title>
+  See: https://www.w3.org/TR/2012/CR-html5-20121217/document-metadata.html#charset -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="Crieur 4.1.1">
+  <!-- Why no `X-UA-Compatible` meta: https://stackoverflow.com/a/6771584 -->
+  <!-- The viewport meta is quite crowded and we are responsible for that.
+  See: https://codepen.io/tigt/post/meta-viewport-for-2015 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Prevent access via referrers, only the domain will be available. -->
+  <meta content="origin-when-cross-origin" name="referrer" />
+  <!-- Required to make a valid HTML5 document. -->
+  <title>Pourquoi le premier jeu de l&#39;imitation n&#39;a jamais été joué • Crieur Perso Test 1</title>
+  <!-- Lightest blank gif, avoids an extra query to the server. -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  
+  <link rel="stylesheet"
+        href="/statics/pico_sans_plus.css" />
+
+  
+    <link rel="stylesheet"
+          href="/statics/font_titrage.css" />
+    <link rel="stylesheet"
+          href="/statics/font_labeur.css" />
+  
+  <link rel="alternate" type="application/atom+xml"
+        title="Feed" href="/feed.xml">
+  <style type="text/css">
+    
+  
+      :root {
+        --pico-font-family: "noto_sansregular";
+        --pico-spacing: 0.25rem;
+      }
+      em, i {
+        font-family: "noto_sansitalic";
+        font-style: normal;
+      }
+      strong, b {
+        font-family: "noto_sansbold";
+        font-weight: normal;
+      }
+      h1, h3, h4, h5, h6 {
+        font-family: "adobe_caslon_probold_italic";
+        font-weight: normal;
+        font-style: normal;
+      }
+      h2 {
+        font-family: "adobe_caslon_prosemibold";
+        font-weight: normal;
+        font-style: normal;
+      }
+      h3 em, h3 i,
+      h4 em, h4 i,
+      h5 em, h5 i,
+      h6 em, h6 i,
+      nav {
+        font-family: "adobe_caslon_proregular";
+        font-weight: normal;
+        font-style: normal;
+      }
+      header:has(h1) {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: calc(var(--pico-block-spacing-vertical) * 4) auto calc(var(--pico-block-spacing-vertical) * 2) auto;
+        max-width: 40rem;
+      }
+      @media (min-width: 768px) {
+        header:has(h1) {
+          margin: calc(var(--pico-block-spacing-vertical) * 10) auto calc(var(--pico-block-spacing-vertical) * 2) auto;
+        }
+      }
+      header:has(h1):before,
+      header:has(h1):after {
+          content: '';
+          flex: 1;
+          height: var(--pico-border-width);
+          background-color: var(--pico-muted-border-color);
+          margin: 0 var(--pico-block-spacing-horizontal);
+      }
+      h1 {
+        margin: 0;
+      }
+      h1 a {
+        color: var(--pico-contrast);
+        text-decoration: none;
+      }
+      h1 a:hover {
+        text-decoration: underline;
+      }
+      dt {
+          font-weight: bold;
+      }
+      nav li a[aria-current] {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+      }
+      nav.header,
+      nav.footer {
+        text-align: center;
+        border-bottom-style: double;
+        border-bottom-color: var(--pico-muted-border-color);
+        max-width: 48rem;
+        margin: 0 auto calc(var(--pico-block-spacing-vertical) * 6) auto;
+        justify-content: center;
+      }
+      nav.footer {
+        margin: calc(var(--pico-block-spacing-vertical) * 6) auto calc(var(--pico-block-spacing-vertical) * 4) auto;
+        border-bottom: none;
+        border-top-style: double;
+        border-top-color: var(--pico-muted-border-color);
+        padding-top: var(--pico-block-spacing-vertical);
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li[aria-hidden="true"] {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        nav ol:last-of-type,
+        nav ul:last-of-type{
+          margin-right: 0;
+        }
+        nav ol:first-of-type,
+        nav ul:first-of-type{
+          margin-left: 0
+        }
+      }
+      @media (min-width: 768px) {
+        nav ul {
+          flex-direction: row;
+        }
+        nav ul li[aria-hidden="true"] {
+          display: initial;
+        }
+      }
+
+      nav li {
+        padding: 0 var(--pico-nav-element-spacing-horizontal);
+      }
+      footer nav ul {
+        margin: 0 auto !important;
+        text-align: center;
+      }
+      .centered {
+        text-align: center;
+      }
+      .muted {
+        color: var(--pico-muted-color) !important;
+      }
+      .border-muted {
+        color: var(--pico-muted-border-color);
+      }
+
+      .aside {
+        display: flex;
+        flex-direction: column;
+        margin-top: calc(var(--pico-block-spacing-vertical) * 10);
+        padding-bottom: calc(var(--pico-block-spacing-vertical) * 5);
+      }
+      .aside:not(:last-child) {
+        border-bottom-style: double;
+        border-bottom-color: var(--pico-muted-border-color);
+      }
+      .aside h2,
+      .aside hgroup {
+        padding-right: calc(var(--pico-block-spacing-horizontal) * 4);
+      }
+      .aside hgroup {
+        text-align: right;
+      }
+      .aside h2 a,
+      .aside h3 a {
+        color: var(--pico-contrast);
+      }
+      .aside ul {
+        border-left: var(--pico-border-width) solid var(--pico-muted-border-color);
+      }
+      @media (min-width: 768px) {
+        .aside {
+          flex-direction: row;
+        }
+        .aside h2,
+        .aside hgroup {
+          width: 15rem;
+          flex-shrink: 0;
+        }
+      }
+      @media (min-width: 992px) {
+        .aside h2,
+        .aside hgroup {
+          width: 20rem;
+        }
+      }
+
+      :root {
+        /* Grid adjustments, see
+        https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/
+        */
+        /**
+         * User input values.
+         */
+        --grid-layout-gap: 10px;
+        --grid-column-count: 1;
+        --grid-item--min-width: 100px;
+
+        /**
+         * Calculated values.
+         */
+        --gap-count: calc(var(--grid-column-count) - 1);
+        --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+        --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+      }
+
+      @media (min-width: 576px) {
+        :root {
+          --grid-column-count: 1;
+        }
+      }
+
+      @media (min-width: 768px) {
+        :root {
+          --grid-column-count: 2;
+        }
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+        grid-gap: var(--grid-layout-gap);
+      }
+
+      .grid article header {
+        text-align: center;
+      }
+
+      .grid h2, .grid h3 {
+        margin-bottom: 0;
+        margin-top: var(--pico-typography-spacing-vertical);
+      }
+      .grid ul.by-2 {
+        columns: 2;
+      }
+      .grid hgroup {
+        margin-bottom: 0;
+      }
+
+      .article-content {
+        min-height: 15rem;
+        padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
+      }
+      .article-body {
+        border-left: var(--pico-border-width) solid var(--pico-muted-border-color);
+        padding-left: calc(var(--pico-nav-element-spacing-horizontal) * 2);
+        flex-grow: 1;
+      }
+      .article-body h2 {
+        width: initial;
+      }
+      .article-body figure {
+        margin: calc(var(--pico-nav-element-spacing-vertical) * 2) calc(var(--pico-nav-element-spacing-horizontal) * 2);
+        text-align: center;
+      }
+      .article-body img {
+        padding: 2px;
+        border-top: var(--pico-border-width) solid var(--pico-muted-border-color);
+        border-left: var(--pico-border-width) solid var(--pico-muted-border-color);
+        border-right: var(--pico-border-width) solid var(--pico-muted-border-color);
+      }
+      .article-body figcaption {
+        font-size: calc(var(--pico-font-size) * 0.6);
+        border-top-color: var(--pico-muted-border-color);
+        border-top-style: double;
+      }
+      .article-body pre {
+        max-width: 35rem;
+        overflow-x: scroll;
+      }
+
+      .article-nav {
+        text-align: right;
+      }
+      .article-nav [role="button"] {
+        padding: calc(var(--pico-form-element-spacing-vertical) / 2) var(--pico-form-element-spacing-horizontal);
+        margin: 0 0 calc(var(--pico-form-element-spacing-vertical) * 2) 0;
+      }
+
+      .article-abstract {
+        padding: calc(var(--pico-spacing) * 4);
+        border-color: var(--pico-muted-border-color);
+        border-style: double;
+        background-color: var(--pico-code-background-color);
+        margin-bottom: calc(var(--pico-form-element-spacing-vertical) * 2);
+      }
+
+      blockquote {
+        padding: calc(var(--pico-spacing) * 4);
+        border-left-style: double;
+      }
+
+      .linkified {
+        float: right;
+        padding-left: calc(var(--pico-spacing) * 4);
+      }
+      .linkified a {
+        text-decoration: none;
+      }
+      .linkified a::after {
+        content: "❡";
+        padding: 0 var(--pico-block-spacing-horizontal);
+        color: var(--pico-muted-border-color);
+      }
+      .linkified:hover a::after {
+        color: var(--pico-muted-color);
+      }
+      .linkified:target a::after {
+        color: var(--pico-mark-color);
+        background-color: var(--pico-mark-background-color);
+      }
+    
+  .article-body {
+    border-left: none;
+    padding-left: 0;
+  }
+  .aside h2, .aside hgroup {
+    padding-right: 0;
+  }
+  .noprint {
+    display: none;
+  }
+
+  </style>
+  
+  <link href="/statics/paged-interface-0.3.css" rel="stylesheet" type="text/css" />
+  <script src="/statics/paged-0.4.3.polyfill.min.js"></script>
+
+
+  <body>
+    <main class="container">
+      
+        <header>
+          <h1><a href="/" title="Retour à l’accueil">Crieur Perso Test 1</a></h1>
+        </header>
+      
+      
+        <nav class="header">
+          <ul class="noprint">
+            <li><a href="/numero/" >Par numéro</a></li>
+            <li class="muted" aria-hidden="true"> ⁙ </li>
+            <li><a href="/blog/" >Par date</a></li>
+            
+              <li class="muted" aria-hidden="true"> ⁙ </li>
+              <li><a href="/mot-clef/" >Par mot-clé</a></li>
+            
+            
+              <li class="muted" aria-hidden="true"> ⁙ </li>
+              <li><a href="/auteur/" >Par auteur·ice</a></li>
+            
+            
+              <li class="muted" aria-hidden="true"> ⁙ </li>
+              <li><a href="/recherche/" >Recherche</a></li>
+            
+          </ul>
+        </nav>
+      
+      <div class="content">
+        
+  <div class="aside">
+    <hgroup>
+      <h2>Pourquoi le premier jeu de l’imitation n’a jamais été joué</h2>
+      <div>
+        <p></p>
+        <div class="muted">
+          
+            
+              <h4><em><a href="/auteur/alexia-schneider/">Alexia Schneider</a></em></h4>
+            
+              <h4><em><a href="/auteur/halima-malek/">Halima Malek</a></em></h4>
+            
+              <h4><em><a href="/auteur/juliette-sokolov/">Juliette Sokolov</a></em></h4>
+            
+              <h4><em><a href="/auteur/giulia-ferretti/">Giulia Ferretti</a></em></h4>
+            
+              <h4><em><a href="/auteur/william-bouchard/">William Bouchard</a></em></h4>
+            
+              <h4><em><a href="/auteur/yann-audin/">Yann Audin</a></em></h4>
+            
+              <h4><em><a href="/auteur/victor-chaix/">Victor Chaix</a></em></h4>
+            
+              <h4><em><a href="/auteur/clara-grometto/">Clara Grometto</a></em></h4>
+            
+              <h4><em><a href="/auteur/nolwenn-pamart/">Nolwenn Pamart</a></em></h4>
+            
+              <h4><em><a href="/auteur/federico-siragusa/">Federico Siragusa</a></em></h4>
+            
+              <h4><em><a href="/auteur/marcello-vitali-rosati/">Marcello Vitali-Rosati</a></em></h4>
+            
+          
+        </div>
+        <p class="muted">
+          <small>
+            <a href="/blog/#date-2026-05-11">11 mai 2026</a>
+            <small class="muted" aria-hidden="true"> ⁙ </small>
+            <a href="/numero/corpus-crieur-test/">Corpus Crieur Test</a>
+            
+              <small class="muted" aria-hidden="true"> ⁙ </small>
+              
+                <a href="/mot-clef/turing-test/">#Turing test</a>, 
+              
+                <a href="/mot-clef/humanites-numeriques/">#Humanités Numériques</a>
+              
+            
+          </small>
+        </p>
+        
+        <p class="muted noprint">
+          <small>
+            ⎙ <a href="/numero/corpus-crieur-test/article/pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue/print/">Imprimer l’article</a>
+          </small>
+        </p>
+      </div>
+    </hgroup>
+    <div class="article-body">
+      
+        <div class="article-abstract"><p>We are updating the lesser-known gendered Turing Test by using both
+human participants and an LLM programmed to &quot;play a woman.&quot; The
+experiment reveals how gendered imitation highlights cultural and
+interpretive biases, demonstrating that the original Turing Test exposes
+our assumptions about intelligence more than it assesses the machine’s
+cognitive abilities.</p>
+</div>
+      
+
+      <h1>Introduction</h1>
+<p>Dans <strong>Computing Machinery and Intelligence</strong>,
+(<a href="#ref_turingcomputingmachineryintelligence1950" id="anchor_turingcomputingmachineryintelligence1950">Turing, 1950</a>) a présenté ce qui est devenu
+le Test de Turing Standard (STT), où un interrogateur doit déterminer
+lequel de deux interlocuteurs cachés est humain. Pourtant, la
+<strong>première</strong> version du jeu, décrite dans le même texte, est bien moins
+discutée&nbsp;:</p>
+<blockquote>
+<p>Il se joue avec trois personnes&nbsp;: un homme (A), une femme (B) et un
+interrogateur (C), qui peut être de l'un ou l'autre sexe. [...]
+L'objectif du jeu pour l'interrogateur est de déterminer qui des deux
+autres est l'homme et qui est la femme. [...] Nous posons maintenant
+la question&nbsp;: «&nbsp;Que se passera-t-il lorsqu'une machine prendra la
+place de A dans ce jeu&#8239;? <sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup></p>
+<p>---&nbsp;(<a href="#ref_turingcomputingmachineryintelligence1950" id="anchor_turingcomputingmachineryintelligence1950">Turing, 1950</a>)</p>
+</blockquote>
+<p>Malgré sa place première dans l'article de Turing, ce Test de Turing
+Genré (ou <em>Gendered Turing Test, GTT</em>) exigeant que la machine incarne
+une femme n'a jamais été mis en pratique. Nous pensons que sa valeur
+réside dans son cadre provocateur et qu'il mérite d'être réactualisé
+dans les débats contemporains sur l'intelligence, qu'elle soit
+artificielle ou humaine.</p>
+<p>Suivant l'hypothèse de (<a href="#ref_sterrettturingstwotests2000" id="anchor_sterrettturingstwotests2000">Sterrett, 2000</a>) selon laquelle le
+GTT serait &quot;l'indication la plus appropriée de l'intelligence&quot; nous
+avons émis l'hypothèse que le GTT égaliserait le terrain entre l'humain
+et la machine, et qu'il constituerait un test empirique de
+l'intelligence basé sur un objectif commun de tromperie. Pour le
+vérifier, nous avons conçu une expérience à petite échelle impliquant 9
+participant·e·s humain·e·s (4&nbsp;femmes, 3&nbsp;hommes et 2&nbsp;interrogateurs de
+genre masculin)<sup class="footnote-ref" id="fnref-2"><a href="#fn-2">2</a></sup> et le modèle de langue ChatGPT-4, tous ayant pour
+objectif de jouer le rôle d'une femme. Dans cette expérimentation,
+l'interrogateur converse séparément avec deux interlocuteur·ice·s
+invisibles, via des médiateurs humains. Chaque échange dure trois
+minutes, et les messages sont retardés pour uniformiser la durée de
+frappe. Deux sessions totalisant quinze tours nous ont permis d'observer
+comment les participant·e·s établissent ou non une stratégie sous la
+contrainte enfin, nous avons collectivement commenté l'expérience.</p>
+<p>À partir de cette réactualisation, nous soutenons que le GTT n'avait pas
+encore été mis en application car sa structure révèle des biais
+culturels et interprétatifs, notamment autour de la performance genrée,
+que le STT tend à laisser implicite. Plutôt que de mesurer
+l'intelligence, les deux versions du jeu de l'imitation fonctionnent
+comme des espaces où les présupposés des expérimentateur·ice·s au sujet
+de l'intelligence sont exposés. Le GTT le rend particulièrement
+explicite&nbsp;: identifier un persona uniquement sur un critère de genre
+souligne la complexité du genre en tant que performance linguistique et
+culturelle. Revisiter le GTT permet ainsi de recadrer le STT, montrant
+que la clarté apparente qui a favorisé son adoption repose sur des
+présupposés concernant humain et machine. L'indétermination conceptuelle
+présente dans la formulation originale de Turing persiste, suggérant que
+les deux tests en révèlent davantage sur nos cadres interprétatifs que
+sur la cognition machine.</p>
+<h1>État de l'art</h1>
+<p>Les recherches sur l'article de Turing se concentrent principalement sur
+le STT et ses implémentations. Alors que les débats sur les capacités
+cognitives des grands modèles de langue (<em>Large Language Model, LLM</em>)
+LLM abondent, les évaluations utilisant le STT restent inconcluantes&nbsp;:
+(<a href="#ref_joneslargelanguagemodels2025" id="anchor_joneslargelanguagemodels2025">Jones &amp; Bergen, 2025</a>) rapportent dans une expérimentation de
+grande échelle que GPT-4.5&nbsp;a trompé les interrogateurs dans 76&#8239;% des
+parties, tandis que (<a href="#ref_restrepoechavarriachatgpt4turingtest2025" id="anchor_restrepoechavarriachatgpt4turingtest2025">Restrepo Echavarría, 2025</a>) observe
+l'inverse, avec une identification de l'IA dans 9&nbsp;interactions sur 10.</p>
+<p>L'accent mis sur le STT pourrait s'expliquer par le fait que beaucoup
+interprètent le GTT comme un dispositif purement illustratif ou
+métaphorique (par ex. (<a href="#ref_goncalvesturingstestbeautiful2024" id="anchor_goncalvesturingstestbeautiful2024">Gonçalves, 2024</a>) et
+(<a href="#ref_piccininituringsrulesimitation2000" id="anchor_piccininituringsrulesimitation2000">Piccinini, 2000</a>)). D'autres, cependant, considèrent
+la version littérale comme significative.
+(<a href="#ref_genovaturingssexualguessing1994" id="anchor_genovaturingssexualguessing1994">Genova, 1994</a>) l'interprète comme un reflet des vues
+personnelles de Turing sur l'identité sexuelle, suggérant que la
+performativité genrée fournit déjà un modèle pour comprendre comment
+l'imitation linguistique pourrait constituer une forme de pensée.</p>
+<p>Malgré l'intérêt théorique pour le GTT, seul
+(<a href="#ref_pattersongenderturingtest2018" id="anchor_pattersongenderturingtest2018">Patterson et al., 2018</a>) a tenté une approximation empirique
+sous ce nom, en se concentrant sur des humains devinant le genre d'un·e
+auteur·ice· à partir de courts textes. Cependant, leur étude
+n'impliquait ni dialogue produit par une machine ni échange interactif
+dans un cadre ludique. Il manque alors une réactualisation interactive
+du GTT mettant en scène les &quot;machines de Turing&quot; à l'état de l'art, à
+savoir les LLMs conversationnels ou génératifs.</p>
+<h1>Résultats de l'expérience du jeu genré&nbsp;: Jouer la féminité</h1>
+<p>Des quinze parties de notre expérimentation, hommes, femmes et IA ont
+tous remporté plusieurs parties. Bien qu'à petite échelle, ce résultat
+souligne la nature performative du dispositif et la profonde
+artificialité de la performance genrée
+(<a href="#ref_butlergendertroublefeminism2011" id="anchor_butlergendertroublefeminism2011">Butler, 2011</a>). Les participantes, quant à elles,
+ont délibéré sur l'opportunité d'exagérer les traits féminins ou de
+présenter un &quot;soi non marqué&quot;. Certaines ont même envisagé d'adopter un
+persona &quot;plus masculin&quot;, bien que cela aille contre leur intérêt dans la
+partie, afin soit de remettre en question les prémisses du jeu soit de
+recourir à des pratiques familières de <em>gender swapping</em> en ligne
+(<a href="#ref_hussaingenderswappingsocializing2008" id="anchor_hussaingenderswappingsocializing2008">Hussain &amp; Griffiths, 2008</a>; <a href="#ref_tanginvestigatingsexualharassment2020" id="anchor_tanginvestigatingsexualharassment2020">Tang et al., 2020</a>).
+Les participants masculins, qu'ils soient joueurs ou interrogateurs,
+avaient tendance à s'appuyer sur des indices formels (ponctuation,
+émoticônes) plutôt que sur le contenu sémantique des échanges. Le LLM,
+pour sa part, a performé de manière cohérente en suivant le prompt
+donné, démontrant que la féminité peut être modélisée par des
+instructions basiques en langue naturelle.</p>
+<p>Nous avons observé que les interrogateurs évaluaient les réponses qui
+leur étaient envoyées en fonction de leurs propres biais et
+extrapolaient à partir de micro-indices linguistiques présents dans les
+réponses des interlocuteurs. Ce que cette instance du GTT a révélé était
+donc moins un concours de tromperie qu'un théâtre d'interprétations.</p>
+<p>Notre expérience suggère que l'une des raisons pour lesquelles le
+premier jeu de l'imitation de Turing n'a rarement, voire jamais à notre
+connaissance, été joué littéralement est qu'il fonctionne moins comme un
+test universel d'intelligence que comme un miroir tendu à notre
+imagination linguistique et sociale. Le rejouer aujourd'hui avec des
+LLMs, capables d'interpréter à un haut degré de fidélité un personnage
+humain, rend visible l'ambiguïté procédurale et la volatilité
+interprétative qui ont maintenu cette version du jeu largement
+théorique.</p>
+<h1>Perspectives</h1>
+<p>Cette réactualisation du GTT démontre comment les méthodes des humanités
+numériques peuvent réactiver des expériences de pensée classiques dans
+le contexte de questionnement collectif sur l'IA, révélant les
+présupposés culturels et interprétatifs que ces outils intègrent.</p>
+<p>En promptant un LLM d'adopter un personnage linguistique genré à partir
+d'un minimum de consignes, l'expérience montre que les machines peuvent
+maîtriser une compétence linguistique, ce qui peut être compris comme
+une définition très étroite de l'intelligence, et non comme une norme
+universelle. Dans ce contexte, ce qui est mis à l'épreuve ne sont pas
+les LLMs, mais plutôt les biais humains exposés par le travail
+interprétatif des interrogateurs lorsqu'ils attribuent une identité,
+genrée ou autre, dans l'incertitude. L'ambiguïté révélée par le travail
+interprétatif des interrogateurs, ambiguïté également présente dans les
+implémentations du STT mais ignorée par les études précédemment citées,
+rappelle de longs débats philosophiques où l'intelligence humaine est
+définie en contraste avec ce que les machines ne peuvent pas encore
+faire, comme le suggère la Chambre chinoise de
+(<a href="#ref_searlemindsbrainsprograms1980" id="anchor_searlemindsbrainsprograms1980">Searle, 1980</a>). Rejouer le GTT clarifie donc que les
+deux tests de Turing interrogent, plutôt qu'ils ne déterminent, la
+frontière entre cognition humaine et machine, ainsi que les différentes
+façons de définir l'intelligence.</p>
+<h1>Références</h1>
+<section id="bibliography">
+<ul>
+    <li>
+        <span id="ref_turingcomputingmachineryintelligence1950">
+            Turing, A. M. (1950). Computing Machinery and Intelligence. <i>Mind; a Quarterly Review of Psychology and Philosophy</i>, <i>LIX</i>(236), 433‑460. https://doi.org/10.1093/mind/LIX.236.433
+            <a href="#anchor_turingcomputingmachineryintelligence1950">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_sterrettturingstwotests2000">
+            Sterrett, S. G. (2000). Turing's Two Tests for Intelligence. <i>Minds and Machines</i>, <i>10</i>(4), 541‑559. https://doi.org/10.1023/A:1011242120015
+            <a href="#anchor_sterrettturingstwotests2000">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_joneslargelanguagemodels2025">
+            Jones, C. R., &amp; Bergen, B. K. (2025). <i>Large Language Models Pass the Turing Test</i>. arXiv. https://doi.org/10.48550/arXiv.2503.23674
+            <a href="#anchor_joneslargelanguagemodels2025">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_restrepoechavarriachatgpt4turingtest2025">
+            Restrepo Echavarría, R. (2025). ChatGPT-4 in the Turing Test. <i>Minds and Machines</i>, <i>35</i>(1), 8. https://doi.org/10.1007/s11023-025-09711-6
+            <a href="#anchor_restrepoechavarriachatgpt4turingtest2025">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_goncalvesturingstestbeautiful2024">
+            Gonçalves, B. (2024). Turing's Test, a Beautiful Thought Experiment. <i>IEEE Annals of the History of Computing</i>, <i>46</i>(3), 36‑49. https://doi.org/10.1109/MAHC.2024.3432278
+            <a href="#anchor_goncalvesturingstestbeautiful2024">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_piccininituringsrulesimitation2000">
+            Piccinini, G. (2000). Turing's Rules for the Imitation Game. <i>Minds and Machines</i>, <i>10</i>(4), 573‑582. https://doi.org/10.1023/A:1011246220923
+            <a href="#anchor_piccininituringsrulesimitation2000">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_genovaturingssexualguessing1994">
+            Genova, J. (1994). Turing's sexual guessing game. <i>Social Epistemology</i>, <i>8</i>(4), 313‑326. https://doi.org/10.1080/02691729408578758
+            <a href="#anchor_genovaturingssexualguessing1994">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_pattersongenderturingtest2018">
+            Patterson, W., Boboye, J., Hall, S., &amp; Hornbuckle, M. (2018). The Gender Turing Test. In D. Nicholson (Éd.), <i>Advances in Human Factors in Cybersecurity</i> (p.  281‑289). Springer International Publishing. https://doi.org/10.1007/978-3-319-60585-2_26
+            <a href="#anchor_pattersongenderturingtest2018">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_butlergendertroublefeminism2011">
+            Butler, J. (2011). <i>Gender Trouble: Feminism and the Subversion of Identity</i>. Routledge. https://doi.org/10.4324/9780203824979
+            <a href="#anchor_butlergendertroublefeminism2011">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_hussaingenderswappingsocializing2008">
+            Hussain, Z., &amp; Griffiths, M. D. (2008). Gender Swapping and Socializing in Cyberspace: An Exploratory Study. <i>CyberPsychology & Behavior</i>, <i>11</i>(1), 47‑53. https://doi.org/10.1089/cpb.2007.0020
+            <a href="#anchor_hussaingenderswappingsocializing2008">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_tanginvestigatingsexualharassment2020">
+            Tang, W. Y., Reer, F., &amp; Quandt, T. (2020). Investigating sexual harassment in online video games: How personality and context factors are related to toxic sexual behaviors against fellow players. <i>Aggressive Behavior</i>, <i>46</i>(1), 127‑135. https://doi.org/10.1002/ab.21873
+            <a href="#anchor_tanginvestigatingsexualharassment2020">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_searlemindsbrainsprograms1980">
+            Searle, J. R. (1980). Minds, brains, and programs. <i>Behavioral and Brain Sciences</i>, <i>3</i>(3), 417‑424. https://doi.org/10.1017/S0140525X00005756
+            <a href="#anchor_searlemindsbrainsprograms1980">↩</a>
+        </span>
+    </li>
+</ul>
+</section>
+<section class="footnotes">
+<ol>
+<li id="fn-1"><p>Notre traduction<a href="#fnref-1" class="footnote">&#8617;</a></p></li>
+<li id="fn-2"><p>Les participant·e·s se sont identifié·e·s en genre.<a href="#fnref-2" class="footnote">&#8617;</a></p></li>
+</ol>
+</section>
+
+    </div>
+  </div>
+
+      </div>
+      
+      <nav class="footer">
+        <p> Ici ajout</p>
+        <h5>
+        <a href="/feed.xml" title="Flux RSS" aria-label="S'abonner au flux RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false" style="vertical-align: middle;">
+            <circle cx="3" cy="13" r="2" fill="currentColor"/>
+            <path d="M1 7a7 7 0 0 1 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 3a11 11 0 0 1 11 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          RSS
+        </a>
+        </h5>
+              </nav>
+      
+    </main>
+    
+    
+  </body>
+</html>

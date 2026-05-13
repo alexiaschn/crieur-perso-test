@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html><!-- This is a valid HTML5 document. -->
+<!-- Screen readers, SEO, extensions and so on. -->
+<html lang="fr">
+  <!-- Has to be within the first 1024 bytes, hence before the <title>
+  See: https://www.w3.org/TR/2012/CR-html5-20121217/document-metadata.html#charset -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="Crieur 4.1.1">
+  <!-- Why no `X-UA-Compatible` meta: https://stackoverflow.com/a/6771584 -->
+  <!-- The viewport meta is quite crowded and we are responsible for that.
+  See: https://codepen.io/tigt/post/meta-viewport-for-2015 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Prevent access via referrers, only the domain will be available. -->
+  <meta content="origin-when-cross-origin" name="referrer" />
+  <!-- Required to make a valid HTML5 document. -->
+  <title>Auteur·ice : Clara Grometto • Crieur Perso Test 1</title>
+  <!-- Lightest blank gif, avoids an extra query to the server. -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  
+    <link rel="stylesheet"
+          href="/statics/pico.css" />
+  
+  
+    <link rel="stylesheet"
+          href="/statics/font_titrage.css" />
+    <link rel="stylesheet"
+          href="/statics/font_labeur.css" />
+  
+  <link rel="alternate" type="application/atom+xml"
+        title="Feed" href="/feed.xml">
+  <style type="text/css">
+    
+      :root {
+        --pico-font-family: "noto_sansregular";
+        --pico-spacing: 0.25rem;
+      }
+      em, i {
+        font-family: "noto_sansitalic";
+        font-style: normal;
+      }
+      strong, b {
+        font-family: "noto_sansbold";
+        font-weight: normal;
+      }
+      h1, h3, h4, h5, h6 {
+        font-family: "adobe_caslon_probold_italic";
+        font-weight: normal;
+        font-style: normal;
+      }
+      h2 {
+        font-family: "adobe_caslon_prosemibold";
+        font-weight: normal;
+        font-style: normal;
+      }
+      h3 em, h3 i,
+      h4 em, h4 i,
+      h5 em, h5 i,
+      h6 em, h6 i,
+      nav {
+        font-family: "adobe_caslon_proregular";
+        font-weight: normal;
+        font-style: normal;
+      }
+      header:has(h1) {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: calc(var(--pico-block-spacing-vertical) * 4) auto calc(var(--pico-block-spacing-vertical) * 2) auto;
+        max-width: 40rem;
+      }
+      @media (min-width: 768px) {
+        header:has(h1) {
+          margin: calc(var(--pico-block-spacing-vertical) * 10) auto calc(var(--pico-block-spacing-vertical) * 2) auto;
+        }
+      }
+      header:has(h1):before,
+      header:has(h1):after {
+          content: '';
+          flex: 1;
+          height: var(--pico-border-width);
+          background-color: var(--pico-muted-border-color);
+          margin: 0 var(--pico-block-spacing-horizontal);
+      }
+      h1 {
+        margin: 0;
+      }
+      h1 a {
+        color: var(--pico-contrast);
+        text-decoration: none;
+      }
+      h1 a:hover {
+        text-decoration: underline;
+      }
+      dt {
+          font-weight: bold;
+      }
+      nav li a[aria-current] {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+      }
+      nav.header,
+      nav.footer {
+        text-align: center;
+        border-bottom-style: double;
+        border-bottom-color: var(--pico-muted-border-color);
+        max-width: 48rem;
+        margin: 0 auto calc(var(--pico-block-spacing-vertical) * 6) auto;
+        justify-content: center;
+      }
+      nav.footer {
+        margin: calc(var(--pico-block-spacing-vertical) * 6) auto calc(var(--pico-block-spacing-vertical) * 4) auto;
+        border-bottom: none;
+        border-top-style: double;
+        border-top-color: var(--pico-muted-border-color);
+        padding-top: var(--pico-block-spacing-vertical);
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li[aria-hidden="true"] {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        nav ol:last-of-type,
+        nav ul:last-of-type{
+          margin-right: 0;
+        }
+        nav ol:first-of-type,
+        nav ul:first-of-type{
+          margin-left: 0
+        }
+      }
+      @media (min-width: 768px) {
+        nav ul {
+          flex-direction: row;
+        }
+        nav ul li[aria-hidden="true"] {
+          display: initial;
+        }
+      }
+
+      nav li {
+        padding: 0 var(--pico-nav-element-spacing-horizontal);
+      }
+      footer nav ul {
+        margin: 0 auto !important;
+        text-align: center;
+      }
+      .centered {
+        text-align: center;
+      }
+      .muted {
+        color: var(--pico-muted-color) !important;
+      }
+      .border-muted {
+        color: var(--pico-muted-border-color);
+      }
+
+      .aside {
+        display: flex;
+        flex-direction: column;
+        margin-top: calc(var(--pico-block-spacing-vertical) * 10);
+        padding-bottom: calc(var(--pico-block-spacing-vertical) * 5);
+      }
+      .aside:not(:last-child) {
+        border-bottom-style: double;
+        border-bottom-color: var(--pico-muted-border-color);
+      }
+      .aside h2,
+      .aside hgroup {
+        padding-right: calc(var(--pico-block-spacing-horizontal) * 4);
+      }
+      .aside hgroup {
+        text-align: right;
+      }
+      .aside h2 a,
+      .aside h3 a {
+        color: var(--pico-contrast);
+      }
+      .aside ul {
+        border-left: var(--pico-border-width) solid var(--pico-muted-border-color);
+      }
+      @media (min-width: 768px) {
+        .aside {
+          flex-direction: row;
+        }
+        .aside h2,
+        .aside hgroup {
+          width: 15rem;
+          flex-shrink: 0;
+        }
+      }
+      @media (min-width: 992px) {
+        .aside h2,
+        .aside hgroup {
+          width: 20rem;
+        }
+      }
+
+      :root {
+        /* Grid adjustments, see
+        https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/
+        */
+        /**
+         * User input values.
+         */
+        --grid-layout-gap: 10px;
+        --grid-column-count: 1;
+        --grid-item--min-width: 100px;
+
+        /**
+         * Calculated values.
+         */
+        --gap-count: calc(var(--grid-column-count) - 1);
+        --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+        --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+      }
+
+      @media (min-width: 576px) {
+        :root {
+          --grid-column-count: 1;
+        }
+      }
+
+      @media (min-width: 768px) {
+        :root {
+          --grid-column-count: 2;
+        }
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+        grid-gap: var(--grid-layout-gap);
+      }
+
+      .grid article header {
+        text-align: center;
+      }
+
+      .grid h2, .grid h3 {
+        margin-bottom: 0;
+        margin-top: var(--pico-typography-spacing-vertical);
+      }
+      .grid ul.by-2 {
+        columns: 2;
+      }
+      .grid hgroup {
+        margin-bottom: 0;
+      }
+
+      .article-content {
+        min-height: 15rem;
+        padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
+      }
+      .article-body {
+        border-left: var(--pico-border-width) solid var(--pico-muted-border-color);
+        padding-left: calc(var(--pico-nav-element-spacing-horizontal) * 2);
+        flex-grow: 1;
+      }
+      .article-body h2 {
+        width: initial;
+      }
+      .article-body figure {
+        margin: calc(var(--pico-nav-element-spacing-vertical) * 2) calc(var(--pico-nav-element-spacing-horizontal) * 2);
+        text-align: center;
+      }
+      .article-body img {
+        padding: 2px;
+        border-top: var(--pico-border-width) solid var(--pico-muted-border-color);
+        border-left: var(--pico-border-width) solid var(--pico-muted-border-color);
+        border-right: var(--pico-border-width) solid var(--pico-muted-border-color);
+      }
+      .article-body figcaption {
+        font-size: calc(var(--pico-font-size) * 0.6);
+        border-top-color: var(--pico-muted-border-color);
+        border-top-style: double;
+      }
+      .article-body pre {
+        max-width: 35rem;
+        overflow-x: scroll;
+      }
+
+      .article-nav {
+        text-align: right;
+      }
+      .article-nav [role="button"] {
+        padding: calc(var(--pico-form-element-spacing-vertical) / 2) var(--pico-form-element-spacing-horizontal);
+        margin: 0 0 calc(var(--pico-form-element-spacing-vertical) * 2) 0;
+      }
+
+      .article-abstract {
+        padding: calc(var(--pico-spacing) * 4);
+        border-color: var(--pico-muted-border-color);
+        border-style: double;
+        background-color: var(--pico-code-background-color);
+        margin-bottom: calc(var(--pico-form-element-spacing-vertical) * 2);
+      }
+
+      blockquote {
+        padding: calc(var(--pico-spacing) * 4);
+        border-left-style: double;
+      }
+
+      .linkified {
+        float: right;
+        padding-left: calc(var(--pico-spacing) * 4);
+      }
+      .linkified a {
+        text-decoration: none;
+      }
+      .linkified a::after {
+        content: "❡";
+        padding: 0 var(--pico-block-spacing-horizontal);
+        color: var(--pico-muted-border-color);
+      }
+      .linkified:hover a::after {
+        color: var(--pico-muted-color);
+      }
+      .linkified:target a::after {
+        color: var(--pico-mark-color);
+        background-color: var(--pico-mark-background-color);
+      }
+    
+  </style>
+  
+  
+
+  <body>
+    <main class="container">
+      
+        <header>
+          <h1><a href="/" title="Retour à l’accueil">Crieur Perso Test 1</a></h1>
+        </header>
+      
+      
+        <nav class="header">
+          <ul class="noprint">
+            <li><a href="/numero/" >Par numéro</a></li>
+            <li class="muted" aria-hidden="true"> ⁙ </li>
+            <li><a href="/blog/" >Par date</a></li>
+            
+              <li class="muted" aria-hidden="true"> ⁙ </li>
+              <li><a href="/mot-clef/" >Par mot-clé</a></li>
+            
+            
+              <li class="muted" aria-hidden="true"> ⁙ </li>
+              <li><a href="/auteur/" >Par auteur·ice</a></li>
+            
+            
+              <li class="muted" aria-hidden="true"> ⁙ </li>
+              <li><a href="/recherche/" >Recherche</a></li>
+            
+          </ul>
+        </nav>
+      
+      <div class="content">
+        
+  <h2 class="centered"><span class="muted">Auteur·ice :</span> Clara Grometto</h2>
+  
+  
+    <div class="aside">
+      <hgroup>
+        <h3><a href="/numero/corpus-crieur-test/article/pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue/">Pourquoi le premier jeu de l'imitation n'a jamais été joué</a></h3>
+        <div>
+          <p></p>
+          <p class="muted">
+            
+              
+                <h4><em><a href="/auteur/alexia-schneider/">Alexia Schneider</a></em></h4>
+              
+                <h4><em><a href="/auteur/halima-malek/">Halima Malek</a></em></h4>
+              
+                <h4><em><a href="/auteur/juliette-sokolov/">Juliette Sokolov</a></em></h4>
+              
+                <h4><em><a href="/auteur/giulia-ferretti/">Giulia Ferretti</a></em></h4>
+              
+                <h4><em><a href="/auteur/william-bouchard/">William Bouchard</a></em></h4>
+              
+                <h4><em><a href="/auteur/yann-audin/">Yann Audin</a></em></h4>
+              
+                <h4><em><a href="/auteur/victor-chaix/">Victor Chaix</a></em></h4>
+              
+                <h4><em><a href="/auteur/clara-grometto/">Clara Grometto</a></em></h4>
+              
+                <h4><em><a href="/auteur/nolwenn-pamart/">Nolwenn Pamart</a></em></h4>
+              
+                <h4><em><a href="/auteur/federico-siragusa/">Federico Siragusa</a></em></h4>
+              
+                <h4><em><a href="/auteur/marcello-vitali-rosati/">Marcello Vitali-Rosati</a></em></h4>
+              
+            
+          </p>
+          <br>
+          <p class="muted">
+            <small>
+              <a href="/blog/#date-2026-05-11">11 mai 2026</a>
+              <small class="muted" aria-hidden="true"> ⁙ </small>
+              <a href="/numero/corpus-crieur-test/">Corpus Crieur Test</a>
+              
+                <small class="muted" aria-hidden="true"> ⁙ </small>
+                
+                  <a href="/mot-clef/turing-test/">#Turing test</a>, 
+                
+                  <a href="/mot-clef/humanites-numeriques/">#Humanités Numériques</a>
+                
+              
+            </small>
+          </p>
+        </div>
+      </hgroup>
+      <div class="article-body">
+        
+          <div class="article-abstract"><p>We are updating the lesser-known gendered Turing Test by using both
+human participants and an LLM programmed to &quot;play a woman.&quot; The
+experiment reveals how gendered imitation highlights cultural and
+interpretive biases, demonstrating that the original Turing Test exposes
+our assumptions about intelligence more than it assesses the machine's
+cognitive abilities.</p>
+</div>
+        
+
+        <div class="article-nav">
+          <a href="/numero/corpus-crieur-test/article/pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue/" role="button" class="secondary">Lire l’article</a>
+        </div>
+      </div>
+    </div>
+  
+
+      </div>
+      
+      <nav class="footer">
+        <p> Ici ajout</p>
+        <h5>
+        <a href="/feed.xml" title="Flux RSS" aria-label="S'abonner au flux RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false" style="vertical-align: middle;">
+            <circle cx="3" cy="13" r="2" fill="currentColor"/>
+            <path d="M1 7a7 7 0 0 1 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 3a11 11 0 0 1 11 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          RSS
+        </a>
+        </h5>
+              </nav>
+      
+    </main>
+    
+    
+  </body>
+</html>

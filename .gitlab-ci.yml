@@ -1,0 +1,12 @@
+image: alpine:latest
+stages:
+  - deploy
+pages:
+  stage: deploy
+  script:
+  - echo 'La magie...'
+  artifacts:
+    paths:
+    - public
+  only:
+  - main

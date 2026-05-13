@@ -1,0 +1,61 @@
+## Ceci est un fichier de configuration pour votre site avec le Crieur.
+## Il utilise la syntaxe TOML : https://toml.io/en/
+
+## Les différentes clés disponibles sont documentées et commentées ici.
+## Vous trouverez une documentation plus avancée du Crieur à l'adresse https://crieur.org/
+
+## Vous pouvez aussi vous inspirer du fichier de configuration qui génère la documentation : 
+## https://gitlab.huma-num.fr/ecrinum/crieur/-/blob/main/documentation.toml
+
+[stylo]
+
+## Identifiants des corpus
+## À récupérer sur Stylo via l'option "copier l'identifiant", dans la page de gestion des corpus.
+ids = [
+  "6a045656ac2af0940291bfdd",  # Premier identifiant de corpus Stylo à adapter,
+]
+
+## Identifiant d’un corpus optionnel qui sert pour les pages satellites (page "à propos", contact, etc.).
+# pages = ""
+
+## Force le re-téléchargement des sources sur Stylo à chaque relancement de la commande build (recommandé).
+# force = true
+
+[generate]
+
+## Titre de votre site.
+title = "Crieur Perso Test 1"
+
+## Racine de l'URL de votre site avec un / final, par exemple, https://crieur.org/ (recommandé).
+# base-url = "https://crieur-perso-test.org/"
+
+## Chemin vers des templates dédiés
+## Vous pouvez reprendre le template général base.html et d'autres sur le dépôt public du Crieur :
+## https://gitlab.huma-num.fr/ecrinum/crieur/-/tree/main/crieur/templates
+templates-path = "templates"
+## Chemin vers des statics dédiées (CSS, images, polices, scripts, ...). 
+statics-path = "statics"
+## Chemin vers un style CSL particulier de traitement des références bibliographiques (expérimental).
+# csl-path = ""
+
+## Utilisation du thème blog avec des articles en ordre anté-chronologique.
+# blog = true
+## Retire les numéros des URL des articles pour une arborescence plate.
+# flat = true
+## Nombre d’items dans le flux RSS (10 par défaut).
+# feed-limit = 40
+## Types d'exports en d'autres formats depuis Stylo, à rendre disponibles en téléchargement des articles.
+## Voir : https://crieur.org/numero/utilisation/article/autoriser-des-telechargements-alternatifs/ 
+# exports = ["md-ssg", "odt"]
+## Ajoute des ancres aux URL pour chaque titre, paragraphe et figure dans un article.
+# linkable-blocks = true
+
+## Chemin de génération des pages publiques de votre site ("public" par défaut).
+# target-path = "public"
+## Chemin particulier pour stocker les fichiers sources de Stylo ("sources" par défaut).
+# sources-path = "sources"
+
+## Option pour ne pas copier les fichiers statiques (utile selon le thème).
+# without-statics = true
+## Option pour ne pas générer de page de recherche sur le site.
+# without-search = true

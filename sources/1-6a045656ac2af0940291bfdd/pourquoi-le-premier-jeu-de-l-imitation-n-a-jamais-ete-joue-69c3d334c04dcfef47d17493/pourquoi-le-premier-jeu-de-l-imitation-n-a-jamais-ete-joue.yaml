@@ -1,0 +1,97 @@
+---
+'@version': '1.0'
+abstract:
+- lang: fr
+  text: 'We are updating the lesser-known gendered Turing Test by using both
+
+    human participants and an LLM programmed to "play a woman." The
+
+    experiment reveals how gendered imitation highlights cultural and
+
+    interpretive biases, demonstrating that the original Turing Test exposes
+
+    our assumptions about intelligence more than it assesses the machine''s
+
+    cognitive abilities.'
+  text_f: 'We are updating the lesser-known gendered Turing Test by using both
+
+    human participants and an LLM programmed to "play a woman." The
+
+    experiment reveals how gendered imitation highlights cultural and
+
+    interpretive biases, demonstrating that the original Turing Test exposes
+
+    our assumptions about intelligence more than it assesses the machine''s
+
+    cognitive abilities.'
+acknowledgements: "Ce projet a \xE9t\xE9 financ\xE9 par une subvention du programme\
+  \ de partenariat\ndu Conseil de recherches en sciences humaines du Canada pour le\
+  \ projet\nRevue 3.0 : \xC9crire, Transmettre, D\xE9couvrir.\n"
+authors:
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Alexia
+  orcid: https://orcid.org/0009-0000-0651-9792
+  surname: Schneider
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Halima
+  orcid: https://orcid.org/0009-0007-8413-6544
+  surname: Malek
+- forname: Juliette
+  orcid: https://orcid.org/0009-0006-6184-0953
+  surname: Sokolov
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Giulia
+  orcid: https://orcid.org/0009-0001-2844-3319
+  surname: Ferretti
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: William
+  orcid: https://orcid.org/0009-0003-3683-2415
+  surname: Bouchard
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Yann
+  orcid: https://orcid.org/0000-0003-3456-9767
+  surname: Audin
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Victor
+  orcid: https://orcid.org/0009-0006-7823-3404
+  surname: Chaix
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Clara
+  orcid: https://orcid.org/0009-0001-2687-342X
+  surname: Grometto
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Nolwenn
+  orcid: https://orcid.org/0009-0005-9063-7404
+  surname: Pamart
+- affiliations: "Universit\xE9 de Montr\xE9al"
+  forname: Federico
+  orcid: https://orcid.org/0009-0002-8842-7043
+  surname: Siragusa
+- forname: Marcello Vitali
+  orcid: https://orcid.org/0000-0001-6424-3229
+  surname: Rosati
+bibliography: pourquoi-le-premier-jeu-de-l-imitation-n-a-jamais-ete-joue.bib
+controlledKeywords: []
+date: 2026/05/11
+day: '11'
+director: []
+dossier: []
+funder: {}
+issueDirectors: []
+keywords:
+- lang: fr
+  list: "Turing test, Humanit\xE9s Num\xE9riques"
+  list_f: "Turing test, Humanit\xE9s Num\xE9riques"
+lang: fr
+month: '05'
+reviewers: []
+title: "Pourquoi le premier jeu de l'imitation n'a jamais \xE9t\xE9 jou\xE9"
+title_f: "Pourquoi le premier jeu de l'imitation n'a jamais \xE9t\xE9 jou\xE9"
+transcribers: []
+translatedTitle: []
+translationOf: []
+translator: []
+type: article
+typeArticle: []
+year: '2026'
+--- 

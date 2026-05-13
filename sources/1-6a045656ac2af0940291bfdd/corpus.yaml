@@ -1,0 +1,41 @@
+---
+_id: 6a045656ac2af0940291bfdd
+articles:
+- article:
+    _id: 69c3de88c04dcfef47d1ee78
+    title: "Agentivit\xE9 \xE9pist\xE9mique et recherche assist\xE9e par IA : un syst\xE8\
+      me   de recommandation transparent pour la recherche informationnelle   exploratoire"
+    title_html: "Agentivit\xE9 \xE9pist\xE9mique et recherche assist\xE9e par IA :\
+      \ un syst\xE8me   de recommandation transparent pour la recherche informationnelle\
+      \   exploratoire"
+    title_raw: "Agentivit\xE9 \xE9pist\xE9mique et recherche assist\xE9e par IA :\
+      \ un syst\xE8me   de recommandation transparent pour la recherche informationnelle\
+      \   exploratoire"
+    title_slug: agentivite-epistemique-et-recherche-assistee-par-ia-un-systeme-de-recommandation-transparent-pour-la-recherche-informationnelle-exploratoire
+    title_stripped: "Agentivit\xE9 \xE9pist\xE9mique et recherche assist\xE9e par\
+      \ IA : un syst\xE8me de recommandation transparent pour la recherche informationnelle\
+      \ exploratoire"
+- article:
+    _id: 69c3d334c04dcfef47d17493
+    title: "Pourquoi le premier jeu de l\\'imitation n\\'a jamais \xE9t\xE9 jou\xE9"
+    title_html: "Pourquoi le premier jeu de l'imitation n'a jamais \xE9t\xE9 jou\xE9"
+    title_raw: "Pourquoi le premier jeu de l\\'imitation n\\'a jamais \xE9t\xE9 jou\xE9"
+    title_slug: pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue
+    title_stripped: "Pourquoi le premier jeu de l&#39;imitation n&#39;a jamais \xE9\
+      t\xE9 jou\xE9"
+description: ''
+metadata:
+  '@version': '1.0'
+  issue:
+    directors:
+    - forename: Alexia
+      surname: Schneider
+    number: 1-1
+    title: Corpus perso test Crieur
+    title_html: Corpus perso test Crieur
+    title_raw: Corpus perso test Crieur
+    title_slug: corpus-perso-test-crieur
+    title_stripped: Corpus perso test Crieur
+  type: journal
+name: Corpus Crieur Test
+--- 

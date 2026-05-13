@@ -1,0 +1,725 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
+  <id>/</id>
+  <title>Crieur Perso Test 1</title>
+  <updated>2026-05-13T11:20:53.149649+00:00</updated>
+  <link href="/" rel="alternate"/>
+  <link href="/feed.xml" rel="self"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
+  <entry>
+    <id>/numero/corpus-crieur-test/article/agentivite-epistemique-et-recherche-assistee-par-ia-un-systeme-de-recommandation-transparent-pour-la-recherche-informationnelle-exploratoire/</id>
+    <title>Agentivité épistémique et recherche assistée par IA : un système de recommandation transparent pour la recherche informationnelle exploratoire</title>
+    <updated>2026-05-13T00:00:00-04:00</updated>
+    <author>
+      <name>Alexia Schneider</name>
+    </author>
+    <author>
+      <name>Marcello Vitali-Rosati</name>
+    </author>
+    <author>
+      <name>Pierre Lévy</name>
+    </author>
+    <link href="/numero/corpus-crieur-test/article/agentivite-epistemique-et-recherche-assistee-par-ia-un-systeme-de-recommandation-transparent-pour-la-recherche-informationnelle-exploratoire/"/>
+    <summary type="html">&lt;h1&gt;Introduction&amp;nbsp;: le problème de la recherche assistée par IA opaque&lt;/h1&gt;
+&lt;p&gt;Les systèmes de recommandation (SR) intégrés aux moteurs de recherche
+scientifiques influencent ce que les chercheur·e·s voient, lisent et
+citent. Pourtant, ces systèmes rendent rarement explicites les
+stratégies de recherche d'information (RI) à l'origne des articles
+présentés. En conséquence, les SR reposent fréquemment sur des métriques
+non sémantiques telles que le nombre de citations, renforçant des
+mécanismes de concentration des citations, également connus sous le nom
+de &lt;em&gt;Matthew's effect&lt;/em&gt; (&lt;a href="#ref_mertonmattheweffectscience1968" id="anchor_mertonmattheweffectscience1968"&gt;Merton, 1968&lt;/a&gt;). D'autres
+systèmes dépendent fortement des interactions passées et enregistrées
+des utilisateur·ice·s (&lt;a href="#ref_kosterserendipitousrecommendationbased2014" id="anchor_kosterserendipitousrecommendationbased2014"&gt;Koster et al., 2014&lt;/a&gt;),
+créant des risques de bulles de filtres (&lt;a href="#ref_pariserfilterbubblewhat2011" id="anchor_pariserfilterbubblewhat2011"&gt;Pariser, 2011&lt;/a&gt;)
+et de biais de confirmation dans le travail scientifique
+(&lt;a href="#ref_underwoodtheorizingresearchpractices2014" id="anchor_underwoodtheorizingresearchpractices2014"&gt;Underwood, 2014&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Le glissement actuel vers des &amp;quot;assistants IA&amp;quot; conversationnels, reposant
+sur un paradigme générique de requêtes en langue naturelle analysées par
+des grands modèles de langue (GML), rend de plus en plus pressantes les
+questions de modélisation alternative, d'interprétabilité et
+d'agentivité épistémique que les Humanités Numériques adressent
+(&lt;a href="#ref_goodladeditorsintroductionhumanities2023" id="anchor_goodladeditorsintroductionhumanities2023"&gt;Goodlad, 2023&lt;/a&gt;; &lt;a href="#ref_vitali-rosatimanifestepouretudes2025a" id="anchor_vitali-rosatimanifestepouretudes2025a"&gt;Vitali-Rosati, 2025&lt;/a&gt;).
+Si les mécanismes derrière les recommandations générées par l'IA
+demeurent opaques, les chercheur·e·s perdent la capacité d'évaluer de
+manière critique la façon dont la pertinence est construite.&lt;/p&gt;
+&lt;p&gt;Notre question de recherche principale est la suivante&amp;nbsp;: quelle
+alternative aux assistants de recherche IA peut être conçue afin de
+mettre en avant des connexions inattendues de manière explicable et
+transparente pour l'utilisateur·ice&amp;#8239;? Pour donner plus de perspective à
+cette question&amp;nbsp;: qu'est-ce qu'une comparaison directe entre une
+ontologie symbolique et une recherche sémantique fondée sur les GML peut
+révéler sur leurs modèles épistémiques sous-jacents&amp;#8239;?&lt;/p&gt;
+&lt;p&gt;Ancrée dans les propositions de
+(&lt;a href="#ref_druckerperformativematerialitytheoretical2013" id="anchor_druckerperformativematerialitytheoretical2013"&gt;Drucker, 2013&lt;/a&gt;), l'outil développé pour
+répondre à ces questions se veut un révélateur d'incertitudes et
+d'interprétations subjectives afin de sensibiliser à la littératie en
+IA. Nous présentons ainsi &lt;code&gt;IEML-RS&lt;/code&gt;, un SR reposant sur un processus
+collaboratif et itératif de construction de requêtes pour une phase de
+recherche d'information exploratoire réflechie et transparente. Nous
+présentons dans un deuxième temps l'évaluation de l'outil à travers les
+résultats d'une étude utilisateur et sur l'évaluation technique du
+parsing sémantique en IEML produit par des GML.&lt;/p&gt;
+&lt;h1&gt;Contexte et état de l'art&lt;/h1&gt;
+&lt;p&gt;Les outils récents de recherche assistée par IA fonctionnent sur
+l'utilisation de GML pour l'expansion de requêtes, le classement de
+pertinence et la synthèse automatisée, à toutes ces étapes, les &amp;quot;choix&amp;quot;
+du modèle sont probabilistes; l'hypothèse distributionnelle
+(&lt;a href="#ref_firthstudieslinguisticanalysis1962" id="anchor_firthstudieslinguisticanalysis1962"&gt;Firth, 1962&lt;/a&gt;; &lt;a href="#ref_harrisdistributionalstructure1981" id="anchor_harrisdistributionalstructure1981"&gt;Harris, 1981&lt;/a&gt;)
+au coeur de ces algorithmes et de l'IA connexionniste suppose que les
+fréquences de cooccurrences d'unités syntaxiques permettent à
+elles-seules de reconstruire la langue et indirectement, ses aspects
+sémantiques.&lt;/p&gt;
+&lt;p&gt;Bien qu'efficace pour la production de texte, cette approche renforce
+implicitement les connexions et les chemins sémantiques les plus
+probables, ce qui dans le cas de la publication académique risque de
+privilégier une littérature déjà citée et de réduire l'espace
+épistémique de la découverte
+(&lt;a href="#ref_nielsenglobalcitationinequality2021" id="anchor_nielsenglobalcitationinequality2021"&gt;Nielsen &amp;amp; Andersen, 2021&lt;/a&gt;; &lt;a href="#ref_varganarrowingliteratureuse2022" id="anchor_varganarrowingliteratureuse2022"&gt;Varga, 2022&lt;/a&gt;).
+Les évaluations des assistants de recherche fondés sur l'IA montrent
+également une opacité persistante, un rappel inégal et une tendance à
+survaloriser les travaux dominants ou fortement cités
+(&lt;a href="#ref_pattersonwhichaitools2025" id="anchor_pattersonwhichaitools2025"&gt;Patterson et al., 2025&lt;/a&gt;; &lt;a href="#ref_archambaultevaluationcuttingedgeai2024" id="anchor_archambaultevaluationcuttingedgeai2024"&gt;Archambault &amp;amp; Rincón, 2024&lt;/a&gt;).
+Comme le soutient (&lt;a href="#ref_tayreproducibilityinterpretabilityacademic2025" id="anchor_tayreproducibilityinterpretabilityacademic2025"&gt;Tay, 2025&lt;/a&gt;), le
+manque de transparence des systèmes contemporains de RI fondés sur les
+GML complique la capacité des utilisateur·ice·s à évaluer de manière
+critique les résultats, soulignant la nécessité d'approches mettant au
+premier plan l'explicabilité et l'agentivité des utilisateur·ice·s.&lt;/p&gt;
+&lt;p&gt;En tant qu'objectif, la sérendipité et la recherche exploratoire
+proposent un paradigme alternatif dans la construction des SR. Des
+travaux fondateurs conceptualisent la sérendipité comme un processus
+itératif mené par l'utilisateur·ice, de &amp;quot;&lt;em&gt;berrypicking&lt;/em&gt;&amp;quot;, dans lequel
+les requêtes évoluent par variantes au fil d'un parcours non linéaire
+alternant rencontres de documents et d'idées
+(&lt;a href="#ref_batesdesignbrowsingberrypicking1989" id="anchor_batesdesignbrowsingberrypicking1989"&gt;Bates, 1989&lt;/a&gt;; &lt;a href="#ref_erdelezinformationencounteringits1999" id="anchor_erdelezinformationencounteringits1999"&gt;Erdelez, 1999&lt;/a&gt;).
+Des modèles ultérieurs soulignent la nature évaluative et définie par
+l'utilisateur·ice de la sérendipité&amp;nbsp;: une découverte ne devient
+&amp;quot;trouvaille&amp;quot; qu'a posteriori, lorsqu'on est à même de réinterprèter sa
+pertinence
+(&lt;a href="#ref_lawleymaximisingserendipityart2008" id="anchor_lawleymaximisingserendipityart2008"&gt;Lawley &amp;amp; Tompkins, 2008&lt;/a&gt;; &lt;a href="#ref_makricominginformationserendipitously2012" id="anchor_makricominginformationserendipitously2012"&gt;Makri &amp;amp; Blandford, 2012&lt;/a&gt;).
+Des études empiriques en contexte académique confirment le rôle de la
+sérendipité dans la diversification des pratiques de lecture et le
+développement d'expertises transdisciplinaires
+(&lt;a href="#ref_fosterserendipityinformationseeking2003" id="anchor_fosterserendipityinformationseeking2003"&gt;Foster &amp;amp; Ford, 2003&lt;/a&gt;). Des exemples d'appropriation
+détournée des fonctionnalités principales des moteurs de recherche
+suggèrent que les pratiques effectives de recherche restent encore
+largement non cartographiées et plus diverses que ne le laissent
+entendre les pratiques guidées actuelles de RI
+(&lt;a href="#ref_dumasprimbaultnaviguerdanssavoirs2023" id="anchor_dumasprimbaultnaviguerdanssavoirs2023"&gt;Dumas Primbault, 2023&lt;/a&gt;). Pourtant, la majorité des SR
+demeurent orientée vers la personnalisation et l'interrogation en langue
+naturelle, visant une RI intuitive plutôt qu'une exploration étendue ou
+un soutien à l'engagement des chercheur·se·s dans la complexité de leurs
+propres investigations.&lt;/p&gt;
+&lt;p&gt;Quelques outils scientifiques tentent de réintroduire l'exploration dans
+la RI pour la recherche scientifique. &lt;code&gt;Bridger&lt;/code&gt;
+(&lt;a href="#ref_portenoyburstingscientificfilter2022" id="anchor_portenoyburstingscientificfilter2022"&gt;Portenoy et al., 2022&lt;/a&gt;) expose les chercheur·se·s à des
+auteur·ice·s extérieur·e·s à leurs réseaux intellectuels habituels afin
+de favoriser le décloisonnement disciplinaire. &lt;code&gt;VITALITY&lt;/code&gt;
+(&lt;a href="#ref_narechaniavitalitypromotingserendipitous2022" id="anchor_narechaniavitalitypromotingserendipitous2022"&gt;Narechania et al., 2022&lt;/a&gt;) propose une approche de
+revue de littérature fondée sur la visualisation, mais repose sur des
+corpus fortement sélectionnés et prétraités. D'autres projets, tels que
+&lt;code&gt;STAK&lt;/code&gt; (&lt;a href="#ref_martinstakserendipitoustool2017" id="anchor_martinstakserendipitoustool2017"&gt;Martin et al., 2017&lt;/a&gt;), s'est inspiré des affordances
+matérielles des bibliothèques physiques en tentant de recréer des
+environnements de navigation spatialisés.&lt;/p&gt;
+&lt;p&gt;+-------------------------------------+----------------------------------+
+|   ------------- ------------------- | Les alternatives aux approches   |
+|    &lt;strong&gt;Mot-clé&lt;/strong&gt;     &lt;strong&gt;conteuse&lt;/strong&gt;     | fondées sur les GML incluent les |
+|       Thème        communication    | graphes de connaissances et les  |
+|        Qui       ~féminin conteur  | ontologies du Web sémantique. Au |
+|       Quoi             récit        | sein des représentations         |
+|       À qui                         | sémantiques symboliques, OWL et  |
+|     Par quoi                        | RDF sont des formalismes bien    |
+|       Quand                         | établis, et l'Information        |
+|        Où                           | Economy MetaLanguage (IEML)      |
+|     Pourquoi                        | (&lt;a href="#ref_levysemanticcomputingieml2023" id="anchor_levysemanticcomputingieml2023"&gt;Lévy, 2023&lt;/a&gt;) |
+|      Comment                        | bien que moins connu, offre une  |
+|   ------------- ------------------- | alternative flexible pertinente  |
+|                                     | pour l'exploration de champs     |
+|  &amp;nbsp;: Décomposition sémantique avec   | conceptuel. IEML est un langage  |
+|   IEML                              | d'explicitation sémantique       |
+|                                     | fondée sur une logique de        |
+|                                     | composition à partir d'unités    |
+|                                     | sémantiques prédéfinies. Les     |
+|                                     | dimensions sémantiques           |
+|                                     | constituent une ontologie fixe   |
+|                                     | de neuf aspects                  |
+|                                     | (thème/processus, qui, quoi, à   |
+|                                     | qui, par quels moyens, quand,    |
+|                                     | où, pourquoi, comment)           |
+|                                     | permettant des définitions       |
+|                                     | flexibles et heuristiques de     |
+|                                     | tout concept dans une structure  |
+|                                     | aisément intelligible et         |
+|                                     | manipulable.                     |
++-------------------------------------+----------------------------------+&lt;/p&gt;
+&lt;p&gt;[]{#tabl-ieml}&lt;/p&gt;
+&lt;p&gt;Le Tableau &lt;!-- [@tabl-ieml]--&gt; offre une visualisation explicite d'une traduction attendue en IEML du concept de &amp;quot;conteuse&amp;quot;&amp;nbsp;: tous les aspects ne sont pas obligatoirement remplis et la flexion d'une valeur peut être signifiée
+par le symbole &lt;code&gt;~&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Alors que les GML sont de plus en plus utilisés pour des tâches
+complexes de &lt;em&gt;parsing&lt;/em&gt; sémantique non structuré, des évaluations
+récentes montrent qu'ils demeurent peu fiables pour les langages
+sémantiques structurés. Par exemple, les modèles d'OpenAI ont obtenu de
+faibles performances dans la génération d'Abstract Meaning
+Representation (AMR), même avec quelques exemples dans le prompt
+(&lt;a href="#ref_ettingeryouareexpert2023" id="anchor_ettingeryouareexpert2023"&gt;Ettinger et al., 2023&lt;/a&gt;). Cela renforce la nécessité de cadres
+sémantiques explicites et interprétables dans la RI scientifique.
+Contrairement à la représentation canonique unique de l'AMR, IEML
+propose une décomposition sémantique flexible et ajustable par
+l'utilisateur·ice, susceptible de soutenir la variation exploratoire.
+Cependant, aucun travail antérieur n'a examiné la traduction automatique
+en IEML ni son intégration dans des systèmes de recommandation.&lt;/p&gt;
+&lt;p&gt;Ensemble, ces lacunes motivent la nécessité de SR transparents et ancrés
+dans une logique interprétative, qui préservent le contrôle des
+utilisateur·ice·s, soutiennent la variation exploratoire et rendent
+visibles les différences épistémiques entre approches symboliques et
+connexionnistes. L'outil &lt;code&gt;IEML-RS&lt;/code&gt; contribue à cet espace en offrant une
+comparaison double, côte à côte, entre une recherche fondée sur
+l'ontologie et une recherche sémantique fondée sur les GML dans un
+contexte réel de découverte scientifique.&lt;/p&gt;
+&lt;h1&gt;IEML-RS&lt;/h1&gt;
+&lt;p&gt;Notre système de recommandation d'articles est une extension du
+navigateur Firefox en Javascript qui dialogue avec le moteur de
+recherche &lt;a href="https://isidore.science"&gt;Isidore&lt;/a&gt; pour les SHS francophones
+via son site web (en extrayant les métadonnées de l'article de départ)
+et son API (fonction de recherche d'articles par mots-clés).
+L'utilisateur·ice commence sur une page d'article dont les métadonnées
+sont extraites. Les mots-clés dont une traduction validée manuellement
+existe sont présentés en bleus, les autres sont en oranges.&lt;/p&gt;
+&lt;p&gt;::: {.columns-flow count=&amp;quot;2&amp;quot;}&lt;/p&gt;
+&lt;p&gt;[]{#grid}&lt;/p&gt;
+&lt;!-- fig width=65% --&gt;
+
+&lt;p&gt;La sélection d'un mot-clé fait apparaître son forme de grille sa
+traduction en IEML, soit sous forme validée (mots-clés bleus), soit sous
+forme de grille à corriger (mots-clés oranges). La sélection d'une
+cellule de la grille fait apparaître tous les mots-clés utilisant le
+même concept. Dans l'exemple de la &lt;a href="#grid"&gt;fig.&lt;/a&gt;{.ref}, la sélection de
+la facette thème &amp;quot;théorie&amp;quot; du mot-clé &amp;quot;éditorialisation&amp;quot; révèle que les
+mots-clés &amp;quot;auctorialité&amp;quot;, &amp;quot;corpus littéraire&amp;quot;, &amp;quot;herméneutique&amp;quot; etc. sont
+aussi traduits avec &amp;quot;théorie&amp;quot; dans leur grille IEML. En proposant une
+conceptualisation simple sous la forme d'une grille qu'il est possible à
+son tour de remplir, les utilisateur·ice·s non familier·e·s avec IEML
+peuvent aisément établir des connexions sémantiques complexes tout en
+apprenant à utiliser le SR.
+:::&lt;/p&gt;
+&lt;p&gt;::: {.columns-flow count=&amp;quot;2&amp;quot;}&lt;/p&gt;
+&lt;p&gt;[]{#trad-ieml}&lt;/p&gt;
+&lt;!--fig width=65% --&gt;
+
+&lt;p&gt;L'un des intérêt saillant du RS repose dans la portée reflexive du
+processus de construction de la requête, processus qui émane de la
+matrice de décomposition sémantique en IEML (voir (&lt;a href="#ref_tabl-ieml" id="anchor_tabl-ieml"&gt;tabl-ieml?&lt;/a&gt;)) mais
+aussi de la traduction automatique en IEML d'un mot-clé générée par
+&lt;code&gt;gemma-3n-E4B-it&lt;/code&gt; (voir &lt;a href="#trad-ieml"&gt;figure&lt;/a&gt;{.ref}). Correction et
+validation par l'utilisateur·ice de la grille pré-remplie par GML
+impliquent une forme de mise en dialogue réflexive non seulement avec le
+concept sélectionné mais aussi, indirectement, avec le GML qui a produit
+la proposition de traduction.&lt;/p&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;p&gt;L'utilisateur·ice construit sa requête sur la base des concepts et
+mots-clés sélectionnés dans cette phase itérative d'exploration (la
+sélection est visible en vert sur la &lt;a href="#panels"&gt;figure&lt;/a&gt;{.ref}). Le
+lancement d'une recherche d'articles laisse voir les panels listant les
+résultats des requêtes permettant ainsi une visualisation de l'impact
+habituellement invisible de la médiation par les GML dans les pratiques
+de recherche (&lt;a href="#panels"&gt;[panels]&lt;/a&gt;{.ref}).&lt;/p&gt;
+&lt;p&gt;[]{#panels}&lt;/p&gt;
+&lt;h1&gt;Évaluations&lt;/h1&gt;
+&lt;h2&gt;Évaluation de GML pour le parsing sémantique en IEML&lt;/h2&gt;
+&lt;p&gt;L'une des principales fonctionnalités du SR est la traduction
+collaborative homme-machine en IEML proposée pour des mots-clés absents
+de la base de données validée manuellement des concepts en IEML. Cette
+fonctionnalité repose sur une traduction proposée par un GML que
+l'utilisateur·ice peut corriger (&lt;a href="#trad-ieml"&gt;[trad-ieml]&lt;/a&gt;{.ref}). Ces
+mots-clés corrigés et validés sont ensuite ajoutés à la base de données
+IEML, conformément à la notion d'intelligence collective affirmée par le
+concepteur d'IEML (&lt;a href="#ref_levycollectiveintelligencemankinds1997" id="anchor_levycollectiveintelligencemankinds1997"&gt;Lévy, 1997&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;model                 BLEU avg   cosine avg   avg&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;noRAG llama_fewshot   5.6e-2     0.515        0.286
+llama_zeroshot        1.3e-2     0.514        0.263
+gemma_zeroshot        1.6e-2     0.479        0.248
+openai_zeroshot       1.6e-2     0.493        0.255
+llama_fewshot         2.2e-2     0.555        0.289
+gemma_fewshot         2.0e-2     0.491        0.255
+openai_fewshot        1.7e-2     0.498        0.257&lt;/p&gt;
+&lt;p&gt;: Résultat des traductions en IEML par GML de 360&amp;nbsp;mots-clés&lt;/p&gt;
+&lt;p&gt;[]{#rag-eval}&lt;/p&gt;
+&lt;p&gt;Pour cette tâche, nous avons évalué trois GML propriétaires
+(&lt;a href="https://huggingface.co/openai/gpt-oss-20b"&gt;&lt;code&gt;GPT-oss-20B&lt;/code&gt;&lt;/a&gt;,
+&lt;a href="https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct"&gt;&lt;code&gt;Meta-Llama-3-70B-Instruct-Turbo&lt;/code&gt;&lt;/a&gt;,
+&lt;a href="https://huggingface.co/google/gemma-3n-E4B-it"&gt;&lt;code&gt;Gemma-3n-E4V-it&lt;/code&gt;&lt;/a&gt;) sur
+leur capacité à traduire 360&amp;nbsp;mots-clés en IEML partant d'un système de
+génération augmentée de récupération (&lt;em&gt;RAG&lt;/em&gt;) avec un prompt contenant 60
+exemples et une récupération de 20&amp;nbsp;mots sélectionnés dans le
+dictionnaire IEML (~3&amp;#8239;000&amp;nbsp;entrées). Les scores quantitatifs montrent
+des gains négligeables avec les exemples contextuels
+(&lt;a href="#rag-eval"&gt;[rag-eval]&lt;/a&gt;{.ref}), et l'analyse qualitative a confirmé
+que les modèles échouent à reproduire les contraintes structurelles
+d'IEML. Les mesures de distances sémantiques (cosine et score BLEU) ne
+conviennent que partiellement à l'évaluation de la traduction; la
+comparaison de vecteurs ne rend pas compte de l'intérêt de la
+concaténation de concepts sémantiques possiblement éloignés mais
+pertinents dans une traduction en IEML. Cela confirme les résultats de
+(&lt;a href="#ref_ettingeryouareexpert2023" id="anchor_ettingeryouareexpert2023"&gt;Ettinger et al., 2023&lt;/a&gt;) sur les limites des GML pour le &lt;em&gt;parsing&lt;/em&gt;
+sémantique structuré, et souligne l'importance de la validation humaine
+pour ce type de tâche. Ce résultat oriente nos perspectives vers de
+futurs designs de SR intégrant les retours et interprétations humaines,
+deux processus cognitifs fondamentaux de la découverte informationnelle
+fortuite (&lt;a href="#ref_makricominginformationserendipitously2012" id="anchor_makricominginformationserendipitously2012"&gt;Makri &amp;amp; Blandford, 2012&lt;/a&gt;).&lt;/p&gt;
+&lt;h2&gt;Étude utilisateur&lt;/h2&gt;
+&lt;h3&gt;Méthodologie&lt;/h3&gt;
+&lt;p&gt;Après l'installation et une démonstration de l'ensemble des
+fonctionnalités du SR, six utilisateur·ice·s volontaires ont été
+observé·e·s lors d'une session de 10&amp;nbsp;minutes d'interaction avec le
+plugiciel, suivie d'un entretien de 15&amp;nbsp;minutes couvrant les
+fonctionnalités et aspects centraux&amp;nbsp;: ergonomie, utilité, navigation par
+mots-clés, traduction en IEML, recherche d'articles et comparaison des
+panels de listes d'articles extraits.&lt;/p&gt;
+&lt;p&gt;Les utilisateur·ice·s étaient six doctorant·e·s en humanités numériques
+et connaissaient tous les développeur·se·s. Les auteur·ice·s
+reconnaissent que ces deux éléments constituent des biais importants de
+cette étude et en limitent la portée analytique.&lt;/p&gt;
+&lt;h1&gt;Résultats et discussion&lt;/h1&gt;
+&lt;p&gt;Les observations issues de l'expérience indiquent que tous les
+participant·e·s ont extrait des articles via le SR, suggérant que
+l'outil a facilité l'accès à une littérature auparavant inconnue, y
+compris pour celles et ceux qui ne recourent pas habituellement à la
+recherche par mots-clés. Bien que tous les utilisateur·ice·s aient
+formulé plusieurs requêtes et comparé les listes d'articles à des degrés
+divers, un seul s'est engagé de manière équivalente dans les deux
+étapes. Tous sauf un ont corrigé les traductions générées par les LLM,
+et une participante les a annotées plutôt que remplacées, indiquant que
+des productions de faible qualité peuvent susciter une posture
+dialogique et collaborative vis-à-vis des tâches sémantiques. De telles
+traductions imparfaites semblent favoriser la réflexivité dans
+l'articulation de concepts sémantiquement riches et soutenir
+l'appropriation de l'outil par l'utilisateur·ice. Étant donné le nombre
+limité de mots-clés prétraduits (420&amp;nbsp;au moment de la rédaction), les
+utilisateur·ice·s ont fréquemment rencontré des concepts &amp;quot;non traduits&amp;quot;;
+loin de constituer une simple contrainte, cette lacune représente une
+opportunité de renforcer l'agentivité des utilisateur·ice·s en les
+invitant à formuler el·eux-mêmes les correspondances conceptuelles
+manquantes en IEML et à participer à l'appropriation du SR.&lt;/p&gt;
+&lt;p&gt;Les participant·e·s ont recommandé diverses améliorations fonctionnelles
+et ajustements UX, mais de nombreuses limites semblent résolubles par
+une intégration directe à Isidore (par exemple&amp;nbsp;: maintien de l'état de
+session, fiches de métadonnées complètes, distinction plus claire entre
+la construction de requêtes et la récupération de documents, et
+réduction de la latence causée par les appels d'API en chaîne). Les
+forces et limites du SR développé seront détaillées lors de la
+conférence.&lt;/p&gt;
+&lt;h1&gt;Perspectives&lt;/h1&gt;
+&lt;p&gt;À notre connaissance, cet outil constitue la première application de
+construction de requêtes impliquant une conceptualisation sémantique
+réalisée de manière collaborative par un humain et un LLM.&amp;nbsp;Nous tenons
+que les SR peuvent être des outils critiques qui exposent, plutôt que
+dissimulent, les différences de modélisation en amont de la RI
+(ontologie vs hypothèse distributionnelle). Dans cette perspective, le
+travail amorcé tant lors du développement de notre RS que lors de son
+évaluation laisse voir que les pratiques de recherche informationnelle
+demeurent variées et qu'il y a encore une place pour la recherche
+réflexive en contexte scientifique. De futurs travaux pourraient mettre
+à profit cette construction itérative d'une requête dans un contexte
+exploratoire pour valoriser et permettre à l'utilisateur·ice de définir
+plus clairement ses intentions, intentionalités floues notamment
+observées dans les usages d'interaction en langue naturelle avec les
+GML (&lt;a href="#ref_subramonyambridginggulfenvisioning2024" id="anchor_subramonyambridginggulfenvisioning2024"&gt;Subramonyam et al., 2024&lt;/a&gt;).&lt;/p&gt;
+&lt;h1&gt;Bibliographie&lt;/h1&gt;
+&lt;section id="bibliography"&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;span id="ref_mertonmattheweffectscience1968"&gt;
+            Merton, R. K. (1968). The Matthew effect in science. The reward and communication systems of science are considered. &lt;i&gt;Science (New York, N.Y.)&lt;/i&gt;, &lt;i&gt;159&lt;/i&gt;(3810), 56‑63.
+            &lt;a href="#anchor_mertonmattheweffectscience1968"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_kosterserendipitousrecommendationbased2014"&gt;
+            Koster, A., Koch, F., &amp;amp; Kim, Y. B. (2014). Serendipitous Recommendation Based on Big Context. In A. L. C. Bazzan &amp;amp; K. Pichara (Éds.), &lt;i&gt;Advances in Artificial Intelligence – IBERAMIA 2014&lt;/i&gt; (p.  319‑330). Springer International Publishing. https://doi.org/10.1007/978-3-319-12027-0_26
+            &lt;a href="#anchor_kosterserendipitousrecommendationbased2014"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_pariserfilterbubblewhat2011"&gt;
+            Pariser, E. (2011, mai). &lt;i&gt;The Filter Bubble: What the Internet Is Hiding from You&lt;/i&gt;.
+            &lt;a href="#anchor_pariserfilterbubblewhat2011"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_underwoodtheorizingresearchpractices2014"&gt;
+            Underwood, T. (2014). Theorizing Research Practices We Forgot to Theorize Twenty Years Ago. &lt;i&gt;Representations&lt;/i&gt;, &lt;i&gt;127&lt;/i&gt;(1), 64‑72. https://doi.org/10.1525/rep.2014.127.1.64
+            &lt;a href="#anchor_underwoodtheorizingresearchpractices2014"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_goodladeditorsintroductionhumanities2023"&gt;
+            Goodlad, L. M. E. (2023). Editor's Introduction: Humanities in the Loop. &lt;i&gt;Critical AI&lt;/i&gt;, &lt;i&gt;1&lt;/i&gt;(1-2). https://doi.org/10.1215/2834703X-10734016
+            &lt;a href="#anchor_goodladeditorsintroductionhumanities2023"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_vitali-rosatimanifestepouretudes2025a"&gt;
+            Vitali-Rosati, M. (2025). &lt;i&gt;Manifeste pour des Études Critiques de l'Intelligence Artificielle&lt;/i&gt;.
+            &lt;a href="#anchor_vitali-rosatimanifestepouretudes2025a"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_druckerperformativematerialitytheoretical2013"&gt;
+            Drucker, J. (2013). Performative Materiality and Theoretical Approaches to Interface. &lt;i&gt;Digital Humanities Quarterly&lt;/i&gt;, &lt;i&gt;7&lt;/i&gt;(1).
+            &lt;a href="#anchor_druckerperformativematerialitytheoretical2013"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_firthstudieslinguisticanalysis1962"&gt;
+            Firth, J. R. (1962). &lt;i&gt;Studies in linguistic analysis&lt;/i&gt; (Repr). Blackwell.
+            &lt;a href="#anchor_firthstudieslinguisticanalysis1962"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_harrisdistributionalstructure1981"&gt;
+            Harris, Z. S. (1981). Distributional Structure. &lt;i&gt;Papers on Syntax&lt;/i&gt;, 3‑22. https://doi.org/10.1007/978-94-009-8467-7_1
+            &lt;a href="#anchor_harrisdistributionalstructure1981"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_nielsenglobalcitationinequality2021"&gt;
+            Nielsen, M. W., &amp;amp; Andersen, J. P. (2021). Global citation inequality is on the rise. &lt;i&gt;Proceedings of the National Academy of Sciences&lt;/i&gt;, &lt;i&gt;118&lt;/i&gt;(7), e2012208118. https://doi.org/10.1073/pnas.2012208118
+            &lt;a href="#anchor_nielsenglobalcitationinequality2021"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_varganarrowingliteratureuse2022"&gt;
+            Varga, A. (2022). The narrowing of literature use and the restricted mobility of papers in the sciences. &lt;i&gt;Proceedings of the National Academy of Sciences&lt;/i&gt;, &lt;i&gt;119&lt;/i&gt;(17), e2117488119. https://doi.org/10.1073/pnas.2117488119
+            &lt;a href="#anchor_varganarrowingliteratureuse2022"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_pattersonwhichaitools2025"&gt;
+            Patterson, B., Flores, C., Hauschild, N., &amp;amp; Branch, J. (2025). Which AI Tools Work Best for Research? Using Librarian and Student Perspectives to Inform a Rating Rubric. &lt;i&gt;Journal of Electronic Resources in Medical Libraries&lt;/i&gt;, &lt;i&gt;22&lt;/i&gt;(3), 133‑138. https://doi.org/10.1080/15424065.2025.2546052
+            &lt;a href="#anchor_pattersonwhichaitools2025"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_archambaultevaluationcuttingedgeai2024"&gt;
+            Archambault, S., &amp;amp; Rincón, J. (2024). An Evaluation of Cutting-Edge AI Research Tools Using the REACT Framework. &lt;i&gt;Computers in Libraries&lt;/i&gt;, &lt;i&gt;44&lt;/i&gt;(8).
+            &lt;a href="#anchor_archambaultevaluationcuttingedgeai2024"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_tayreproducibilityinterpretabilityacademic2025"&gt;
+            Tay, A. (2025). &lt;i&gt;The reproducibility and interpretability of academic AI search engines like Primo Research Assistant, Web of Science Research Assistant, Scopus AI and more&lt;/i&gt;.
+            &lt;a href="#anchor_tayreproducibilityinterpretabilityacademic2025"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_batesdesignbrowsingberrypicking1989"&gt;
+            Bates, M. J. (1989). The design of browsing and berrypicking techniques for the online search interface. &lt;i&gt;Online Review&lt;/i&gt;, &lt;i&gt;13&lt;/i&gt;(5), 407‑424. https://doi.org/10.1108/eb024320
+            &lt;a href="#anchor_batesdesignbrowsingberrypicking1989"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_erdelezinformationencounteringits1999"&gt;
+            Erdelez, S. (1999). Information Encountering: It's More Than Just Bumping into Information. &lt;i&gt;Bulletin of the American Society for Information Science and Technology&lt;/i&gt;, &lt;i&gt;25&lt;/i&gt;(3), 26‑29. https://doi.org/10.1002/bult.118
+            &lt;a href="#anchor_erdelezinformationencounteringits1999"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_lawleymaximisingserendipityart2008"&gt;
+            Lawley, J., &amp;amp; Tompkins, P. (2008). &lt;i&gt;Maximising Serendipity: The art of recognising and fostering potential&lt;/i&gt;.
+            &lt;a href="#anchor_lawleymaximisingserendipityart2008"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_makricominginformationserendipitously2012"&gt;
+            Makri, S., &amp;amp; Blandford, A. (2012). Coming across information serendipitously – Part 1: A process model. &lt;i&gt;Journal of Documentation&lt;/i&gt;, &lt;i&gt;68&lt;/i&gt;(5), 684‑705. https://doi.org/10.1108/00220411211256030
+            &lt;a href="#anchor_makricominginformationserendipitously2012"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_fosterserendipityinformationseeking2003"&gt;
+            Foster, A., &amp;amp; Ford, N. (2003). Serendipity and information seeking: An empirical study. &lt;i&gt;Journal of Documentation&lt;/i&gt;, &lt;i&gt;59&lt;/i&gt;(3), 321‑340. https://doi.org/10.1108/00220410310472518
+            &lt;a href="#anchor_fosterserendipityinformationseeking2003"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_dumasprimbaultnaviguerdanssavoirs2023"&gt;
+            Dumas Primbault, S. (2023). Naviguer dans les savoirs à l'ère numérique. Pour une ethnographie des pratiques informationnelles sur Gallica. &lt;i&gt;Études De Communication. Langages, Information, Médiations&lt;/i&gt;, &lt;i&gt;61&lt;/i&gt;, 61‑89. https://doi.org/10.4000/edc.16108
+            &lt;a href="#anchor_dumasprimbaultnaviguerdanssavoirs2023"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_portenoyburstingscientificfilter2022"&gt;
+            Portenoy, J., Radensky, M., West, J. D., Horvitz, E., Weld, D. S., &amp;amp; Hope, T. (2022). Bursting Scientific Filter Bubbles: Boosting Innovation via Novel Author Discovery. &lt;i&gt;CHI Conference on Human Factors in Computing Systems&lt;/i&gt;, 1‑13. https://doi.org/10.1145/3491102.3501905
+            &lt;a href="#anchor_portenoyburstingscientificfilter2022"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_narechaniavitalitypromotingserendipitous2022"&gt;
+            Narechania, A., Karduni, A., Wesslen, R., &amp;amp; Wall, E. (2022). VITALITY: Promoting Serendipitous Discovery of Academic Literature with Transformers &amp; Visual Analytics. &lt;i&gt;IEEE Transactions on Visualization and Computer Graphics&lt;/i&gt;, &lt;i&gt;28&lt;/i&gt;(1), 486‑496. https://doi.org/10.1109/TVCG.2021.3114820
+            &lt;a href="#anchor_narechaniavitalitypromotingserendipitous2022"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_martinstakserendipitoustool2017"&gt;
+            Martin, K., Greenspan, B., &amp;amp; Quan-Haase, A. (2017). STAK – Serendipitous tool for augmenting knowledge: A conceptual tool for bridging digital and physical resources. &lt;i&gt;Digital Studies / Le Champ Numérique&lt;/i&gt;, &lt;i&gt;6&lt;/i&gt;(1). https://doi.org/10.16995/dscn.265
+            &lt;a href="#anchor_martinstakserendipitoustool2017"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_levysemanticcomputingieml2023"&gt;
+            Lévy, P. (2023). Semantic computing with IEML. &lt;i&gt;Collective Intelligence&lt;/i&gt;, &lt;i&gt;2&lt;/i&gt;(4), 26339137231207634. https://doi.org/10.1177/26339137231207634
+            &lt;a href="#anchor_levysemanticcomputingieml2023"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_ettingeryouareexpert2023"&gt;
+            Ettinger, A., Hwang, J. D., Pyatkin, V., Bhagavatula, C., &amp;amp; Choi, Y. (2023). &lt;i&gt;"You Are An Expert Linguistic Annotator": Limits of LLMs as Analyzers of Abstract Meaning Representation&lt;/i&gt;. https://doi.org/10.48550/ARXIV.2310.17793
+            &lt;a href="#anchor_ettingeryouareexpert2023"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_levycollectiveintelligencemankinds1997"&gt;
+            Lévy, P. (1997). &lt;i&gt;Collective Intelligence: Mankind's Emerging World in Cyberspace&lt;/i&gt; (Plenum Trade).
+            &lt;a href="#anchor_levycollectiveintelligencemankinds1997"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_subramonyambridginggulfenvisioning2024"&gt;
+            Subramonyam, H., Pea, R., Pondoc, C., Agrawala, M., &amp;amp; Seifert, C. (2024). Bridging the Gulf of Envisioning: Cognitive Challenges in Prompt Based Interactions with LLMs. &lt;i&gt;Proceedings of the CHI Conference on Human Factors in Computing Systems&lt;/i&gt;, 1‑19. https://doi.org/10.1145/3613904.3642754
+            &lt;a href="#anchor_subramonyambridginggulfenvisioning2024"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</summary>
+    <category term="système de recommandation"/>
+    <category term="recherche d'information"/>
+    <category term="AI-research assistant"/>
+    <category term="recherche exploratoire"/>
+    <category term="recommender system"/>
+    <category term="AI-research assistant"/>
+    <category term="exploratory search practices"/>
+    <category term="ieml"/>
+  </entry>
+  <entry>
+    <id>/numero/corpus-crieur-test/article/pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue/</id>
+    <title>Pourquoi le premier jeu de l&amp;#39;imitation n&amp;#39;a jamais été joué</title>
+    <updated>2026-05-11T00:00:00-04:00</updated>
+    <author>
+      <name>Alexia Schneider</name>
+    </author>
+    <author>
+      <name>Halima Malek</name>
+    </author>
+    <author>
+      <name>Juliette Sokolov</name>
+    </author>
+    <author>
+      <name>Giulia Ferretti</name>
+    </author>
+    <author>
+      <name>William Bouchard</name>
+    </author>
+    <author>
+      <name>Yann Audin</name>
+    </author>
+    <author>
+      <name>Victor Chaix</name>
+    </author>
+    <author>
+      <name>Clara Grometto</name>
+    </author>
+    <author>
+      <name>Nolwenn Pamart</name>
+    </author>
+    <author>
+      <name>Federico Siragusa</name>
+    </author>
+    <author>
+      <name>Marcello Vitali-Rosati</name>
+    </author>
+    <link href="/numero/corpus-crieur-test/article/pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue/"/>
+    <summary type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Dans &lt;strong&gt;Computing Machinery and Intelligence&lt;/strong&gt;,
+(&lt;a href="#ref_turingcomputingmachineryintelligence1950" id="anchor_turingcomputingmachineryintelligence1950"&gt;Turing, 1950&lt;/a&gt;) a présenté ce qui est devenu
+le Test de Turing Standard (STT), où un interrogateur doit déterminer
+lequel de deux interlocuteurs cachés est humain. Pourtant, la
+&lt;strong&gt;première&lt;/strong&gt; version du jeu, décrite dans le même texte, est bien moins
+discutée&amp;nbsp;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Il se joue avec trois personnes&amp;nbsp;: un homme (A), une femme (B) et un
+interrogateur (C), qui peut être de l'un ou l'autre sexe. [...]
+L'objectif du jeu pour l'interrogateur est de déterminer qui des deux
+autres est l'homme et qui est la femme. [...] Nous posons maintenant
+la question&amp;nbsp;: «&amp;nbsp;Que se passera-t-il lorsqu'une machine prendra la
+place de A dans ce jeu&amp;#8239;? &lt;sup class="footnote-ref" id="fnref-1"&gt;&lt;a href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;---&amp;nbsp;(&lt;a href="#ref_turingcomputingmachineryintelligence1950" id="anchor_turingcomputingmachineryintelligence1950"&gt;Turing, 1950&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Malgré sa place première dans l'article de Turing, ce Test de Turing
+Genré (ou &lt;em&gt;Gendered Turing Test, GTT&lt;/em&gt;) exigeant que la machine incarne
+une femme n'a jamais été mis en pratique. Nous pensons que sa valeur
+réside dans son cadre provocateur et qu'il mérite d'être réactualisé
+dans les débats contemporains sur l'intelligence, qu'elle soit
+artificielle ou humaine.&lt;/p&gt;
+&lt;p&gt;Suivant l'hypothèse de (&lt;a href="#ref_sterrettturingstwotests2000" id="anchor_sterrettturingstwotests2000"&gt;Sterrett, 2000&lt;/a&gt;) selon laquelle le
+GTT serait &amp;quot;l'indication la plus appropriée de l'intelligence&amp;quot; nous
+avons émis l'hypothèse que le GTT égaliserait le terrain entre l'humain
+et la machine, et qu'il constituerait un test empirique de
+l'intelligence basé sur un objectif commun de tromperie. Pour le
+vérifier, nous avons conçu une expérience à petite échelle impliquant 9
+participant·e·s humain·e·s (4&amp;nbsp;femmes, 3&amp;nbsp;hommes et 2&amp;nbsp;interrogateurs de
+genre masculin)&lt;sup class="footnote-ref" id="fnref-2"&gt;&lt;a href="#fn-2"&gt;2&lt;/a&gt;&lt;/sup&gt; et le modèle de langue ChatGPT-4, tous ayant pour
+objectif de jouer le rôle d'une femme. Dans cette expérimentation,
+l'interrogateur converse séparément avec deux interlocuteur·ice·s
+invisibles, via des médiateurs humains. Chaque échange dure trois
+minutes, et les messages sont retardés pour uniformiser la durée de
+frappe. Deux sessions totalisant quinze tours nous ont permis d'observer
+comment les participant·e·s établissent ou non une stratégie sous la
+contrainte enfin, nous avons collectivement commenté l'expérience.&lt;/p&gt;
+&lt;p&gt;À partir de cette réactualisation, nous soutenons que le GTT n'avait pas
+encore été mis en application car sa structure révèle des biais
+culturels et interprétatifs, notamment autour de la performance genrée,
+que le STT tend à laisser implicite. Plutôt que de mesurer
+l'intelligence, les deux versions du jeu de l'imitation fonctionnent
+comme des espaces où les présupposés des expérimentateur·ice·s au sujet
+de l'intelligence sont exposés. Le GTT le rend particulièrement
+explicite&amp;nbsp;: identifier un persona uniquement sur un critère de genre
+souligne la complexité du genre en tant que performance linguistique et
+culturelle. Revisiter le GTT permet ainsi de recadrer le STT, montrant
+que la clarté apparente qui a favorisé son adoption repose sur des
+présupposés concernant humain et machine. L'indétermination conceptuelle
+présente dans la formulation originale de Turing persiste, suggérant que
+les deux tests en révèlent davantage sur nos cadres interprétatifs que
+sur la cognition machine.&lt;/p&gt;
+&lt;h1&gt;État de l'art&lt;/h1&gt;
+&lt;p&gt;Les recherches sur l'article de Turing se concentrent principalement sur
+le STT et ses implémentations. Alors que les débats sur les capacités
+cognitives des grands modèles de langue (&lt;em&gt;Large Language Model, LLM&lt;/em&gt;)
+LLM abondent, les évaluations utilisant le STT restent inconcluantes&amp;nbsp;:
+(&lt;a href="#ref_joneslargelanguagemodels2025" id="anchor_joneslargelanguagemodels2025"&gt;Jones &amp;amp; Bergen, 2025&lt;/a&gt;) rapportent dans une expérimentation de
+grande échelle que GPT-4.5&amp;nbsp;a trompé les interrogateurs dans 76&amp;#8239;% des
+parties, tandis que (&lt;a href="#ref_restrepoechavarriachatgpt4turingtest2025" id="anchor_restrepoechavarriachatgpt4turingtest2025"&gt;Restrepo Echavarría, 2025&lt;/a&gt;) observe
+l'inverse, avec une identification de l'IA dans 9&amp;nbsp;interactions sur 10.&lt;/p&gt;
+&lt;p&gt;L'accent mis sur le STT pourrait s'expliquer par le fait que beaucoup
+interprètent le GTT comme un dispositif purement illustratif ou
+métaphorique (par ex. (&lt;a href="#ref_goncalvesturingstestbeautiful2024" id="anchor_goncalvesturingstestbeautiful2024"&gt;Gonçalves, 2024&lt;/a&gt;) et
+(&lt;a href="#ref_piccininituringsrulesimitation2000" id="anchor_piccininituringsrulesimitation2000"&gt;Piccinini, 2000&lt;/a&gt;)). D'autres, cependant, considèrent
+la version littérale comme significative.
+(&lt;a href="#ref_genovaturingssexualguessing1994" id="anchor_genovaturingssexualguessing1994"&gt;Genova, 1994&lt;/a&gt;) l'interprète comme un reflet des vues
+personnelles de Turing sur l'identité sexuelle, suggérant que la
+performativité genrée fournit déjà un modèle pour comprendre comment
+l'imitation linguistique pourrait constituer une forme de pensée.&lt;/p&gt;
+&lt;p&gt;Malgré l'intérêt théorique pour le GTT, seul
+(&lt;a href="#ref_pattersongenderturingtest2018" id="anchor_pattersongenderturingtest2018"&gt;Patterson et al., 2018&lt;/a&gt;) a tenté une approximation empirique
+sous ce nom, en se concentrant sur des humains devinant le genre d'un·e
+auteur·ice· à partir de courts textes. Cependant, leur étude
+n'impliquait ni dialogue produit par une machine ni échange interactif
+dans un cadre ludique. Il manque alors une réactualisation interactive
+du GTT mettant en scène les &amp;quot;machines de Turing&amp;quot; à l'état de l'art, à
+savoir les LLMs conversationnels ou génératifs.&lt;/p&gt;
+&lt;h1&gt;Résultats de l'expérience du jeu genré&amp;nbsp;: Jouer la féminité&lt;/h1&gt;
+&lt;p&gt;Des quinze parties de notre expérimentation, hommes, femmes et IA ont
+tous remporté plusieurs parties. Bien qu'à petite échelle, ce résultat
+souligne la nature performative du dispositif et la profonde
+artificialité de la performance genrée
+(&lt;a href="#ref_butlergendertroublefeminism2011" id="anchor_butlergendertroublefeminism2011"&gt;Butler, 2011&lt;/a&gt;). Les participantes, quant à elles,
+ont délibéré sur l'opportunité d'exagérer les traits féminins ou de
+présenter un &amp;quot;soi non marqué&amp;quot;. Certaines ont même envisagé d'adopter un
+persona &amp;quot;plus masculin&amp;quot;, bien que cela aille contre leur intérêt dans la
+partie, afin soit de remettre en question les prémisses du jeu soit de
+recourir à des pratiques familières de &lt;em&gt;gender swapping&lt;/em&gt; en ligne
+(&lt;a href="#ref_hussaingenderswappingsocializing2008" id="anchor_hussaingenderswappingsocializing2008"&gt;Hussain &amp;amp; Griffiths, 2008&lt;/a&gt;; &lt;a href="#ref_tanginvestigatingsexualharassment2020" id="anchor_tanginvestigatingsexualharassment2020"&gt;Tang et al., 2020&lt;/a&gt;).
+Les participants masculins, qu'ils soient joueurs ou interrogateurs,
+avaient tendance à s'appuyer sur des indices formels (ponctuation,
+émoticônes) plutôt que sur le contenu sémantique des échanges. Le LLM,
+pour sa part, a performé de manière cohérente en suivant le prompt
+donné, démontrant que la féminité peut être modélisée par des
+instructions basiques en langue naturelle.&lt;/p&gt;
+&lt;p&gt;Nous avons observé que les interrogateurs évaluaient les réponses qui
+leur étaient envoyées en fonction de leurs propres biais et
+extrapolaient à partir de micro-indices linguistiques présents dans les
+réponses des interlocuteurs. Ce que cette instance du GTT a révélé était
+donc moins un concours de tromperie qu'un théâtre d'interprétations.&lt;/p&gt;
+&lt;p&gt;Notre expérience suggère que l'une des raisons pour lesquelles le
+premier jeu de l'imitation de Turing n'a rarement, voire jamais à notre
+connaissance, été joué littéralement est qu'il fonctionne moins comme un
+test universel d'intelligence que comme un miroir tendu à notre
+imagination linguistique et sociale. Le rejouer aujourd'hui avec des
+LLMs, capables d'interpréter à un haut degré de fidélité un personnage
+humain, rend visible l'ambiguïté procédurale et la volatilité
+interprétative qui ont maintenu cette version du jeu largement
+théorique.&lt;/p&gt;
+&lt;h1&gt;Perspectives&lt;/h1&gt;
+&lt;p&gt;Cette réactualisation du GTT démontre comment les méthodes des humanités
+numériques peuvent réactiver des expériences de pensée classiques dans
+le contexte de questionnement collectif sur l'IA, révélant les
+présupposés culturels et interprétatifs que ces outils intègrent.&lt;/p&gt;
+&lt;p&gt;En promptant un LLM d'adopter un personnage linguistique genré à partir
+d'un minimum de consignes, l'expérience montre que les machines peuvent
+maîtriser une compétence linguistique, ce qui peut être compris comme
+une définition très étroite de l'intelligence, et non comme une norme
+universelle. Dans ce contexte, ce qui est mis à l'épreuve ne sont pas
+les LLMs, mais plutôt les biais humains exposés par le travail
+interprétatif des interrogateurs lorsqu'ils attribuent une identité,
+genrée ou autre, dans l'incertitude. L'ambiguïté révélée par le travail
+interprétatif des interrogateurs, ambiguïté également présente dans les
+implémentations du STT mais ignorée par les études précédemment citées,
+rappelle de longs débats philosophiques où l'intelligence humaine est
+définie en contraste avec ce que les machines ne peuvent pas encore
+faire, comme le suggère la Chambre chinoise de
+(&lt;a href="#ref_searlemindsbrainsprograms1980" id="anchor_searlemindsbrainsprograms1980"&gt;Searle, 1980&lt;/a&gt;). Rejouer le GTT clarifie donc que les
+deux tests de Turing interrogent, plutôt qu'ils ne déterminent, la
+frontière entre cognition humaine et machine, ainsi que les différentes
+façons de définir l'intelligence.&lt;/p&gt;
+&lt;h1&gt;Références&lt;/h1&gt;
+&lt;section id="bibliography"&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;span id="ref_turingcomputingmachineryintelligence1950"&gt;
+            Turing, A. M. (1950). Computing Machinery and Intelligence. &lt;i&gt;Mind; a Quarterly Review of Psychology and Philosophy&lt;/i&gt;, &lt;i&gt;LIX&lt;/i&gt;(236), 433‑460. https://doi.org/10.1093/mind/LIX.236.433
+            &lt;a href="#anchor_turingcomputingmachineryintelligence1950"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_sterrettturingstwotests2000"&gt;
+            Sterrett, S. G. (2000). Turing's Two Tests for Intelligence. &lt;i&gt;Minds and Machines&lt;/i&gt;, &lt;i&gt;10&lt;/i&gt;(4), 541‑559. https://doi.org/10.1023/A:1011242120015
+            &lt;a href="#anchor_sterrettturingstwotests2000"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_joneslargelanguagemodels2025"&gt;
+            Jones, C. R., &amp;amp; Bergen, B. K. (2025). &lt;i&gt;Large Language Models Pass the Turing Test&lt;/i&gt;. arXiv. https://doi.org/10.48550/arXiv.2503.23674
+            &lt;a href="#anchor_joneslargelanguagemodels2025"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_restrepoechavarriachatgpt4turingtest2025"&gt;
+            Restrepo Echavarría, R. (2025). ChatGPT-4 in the Turing Test. &lt;i&gt;Minds and Machines&lt;/i&gt;, &lt;i&gt;35&lt;/i&gt;(1), 8. https://doi.org/10.1007/s11023-025-09711-6
+            &lt;a href="#anchor_restrepoechavarriachatgpt4turingtest2025"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_goncalvesturingstestbeautiful2024"&gt;
+            Gonçalves, B. (2024). Turing's Test, a Beautiful Thought Experiment. &lt;i&gt;IEEE Annals of the History of Computing&lt;/i&gt;, &lt;i&gt;46&lt;/i&gt;(3), 36‑49. https://doi.org/10.1109/MAHC.2024.3432278
+            &lt;a href="#anchor_goncalvesturingstestbeautiful2024"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_piccininituringsrulesimitation2000"&gt;
+            Piccinini, G. (2000). Turing's Rules for the Imitation Game. &lt;i&gt;Minds and Machines&lt;/i&gt;, &lt;i&gt;10&lt;/i&gt;(4), 573‑582. https://doi.org/10.1023/A:1011246220923
+            &lt;a href="#anchor_piccininituringsrulesimitation2000"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_genovaturingssexualguessing1994"&gt;
+            Genova, J. (1994). Turing's sexual guessing game. &lt;i&gt;Social Epistemology&lt;/i&gt;, &lt;i&gt;8&lt;/i&gt;(4), 313‑326. https://doi.org/10.1080/02691729408578758
+            &lt;a href="#anchor_genovaturingssexualguessing1994"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_pattersongenderturingtest2018"&gt;
+            Patterson, W., Boboye, J., Hall, S., &amp;amp; Hornbuckle, M. (2018). The Gender Turing Test. In D. Nicholson (Éd.), &lt;i&gt;Advances in Human Factors in Cybersecurity&lt;/i&gt; (p.  281‑289). Springer International Publishing. https://doi.org/10.1007/978-3-319-60585-2_26
+            &lt;a href="#anchor_pattersongenderturingtest2018"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_butlergendertroublefeminism2011"&gt;
+            Butler, J. (2011). &lt;i&gt;Gender Trouble: Feminism and the Subversion of Identity&lt;/i&gt;. Routledge. https://doi.org/10.4324/9780203824979
+            &lt;a href="#anchor_butlergendertroublefeminism2011"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_hussaingenderswappingsocializing2008"&gt;
+            Hussain, Z., &amp;amp; Griffiths, M. D. (2008). Gender Swapping and Socializing in Cyberspace: An Exploratory Study. &lt;i&gt;CyberPsychology &amp; Behavior&lt;/i&gt;, &lt;i&gt;11&lt;/i&gt;(1), 47‑53. https://doi.org/10.1089/cpb.2007.0020
+            &lt;a href="#anchor_hussaingenderswappingsocializing2008"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_tanginvestigatingsexualharassment2020"&gt;
+            Tang, W. Y., Reer, F., &amp;amp; Quandt, T. (2020). Investigating sexual harassment in online video games: How personality and context factors are related to toxic sexual behaviors against fellow players. &lt;i&gt;Aggressive Behavior&lt;/i&gt;, &lt;i&gt;46&lt;/i&gt;(1), 127‑135. https://doi.org/10.1002/ab.21873
+            &lt;a href="#anchor_tanginvestigatingsexualharassment2020"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;&lt;li&gt;
+        &lt;span id="ref_searlemindsbrainsprograms1980"&gt;
+            Searle, J. R. (1980). Minds, brains, and programs. &lt;i&gt;Behavioral and Brain Sciences&lt;/i&gt;, &lt;i&gt;3&lt;/i&gt;(3), 417‑424. https://doi.org/10.1017/S0140525X00005756
+            &lt;a href="#anchor_searlemindsbrainsprograms1980"&gt;↩&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class="footnotes"&gt;
+&lt;ol&gt;
+&lt;li id="fn-1"&gt;&lt;p&gt;Notre traduction&lt;a href="#fnref-1" class="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn-2"&gt;&lt;p&gt;Les participant·e·s se sont identifié·e·s en genre.&lt;a href="#fnref-2" class="footnote"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</summary>
+    <category term="Turing test"/>
+    <category term="Humanités Numériques"/>
+  </entry>
+</feed>

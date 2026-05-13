@@ -1,0 +1,921 @@
+﻿<!DOCTYPE html><!-- This is a valid HTML5 document. -->
+<!-- Screen readers, SEO, extensions and so on. -->
+<html lang="fr">
+  <!-- Has to be within the first 1024 bytes, hence before the <title>
+  See: https://www.w3.org/TR/2012/CR-html5-20121217/document-metadata.html#charset -->
+  <meta charset="utf-8" />
+  <meta name="generator" content="Crieur 4.1.1">
+  <!-- Why no `X-UA-Compatible` meta: https://stackoverflow.com/a/6771584 -->
+  <!-- The viewport meta is quite crowded and we are responsible for that.
+  See: https://codepen.io/tigt/post/meta-viewport-for-2015 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Prevent access via referrers, only the domain will be available. -->
+  <meta content="origin-when-cross-origin" name="referrer" />
+  <!-- Required to make a valid HTML5 document. -->
+  <title>Agentivité épistémique et recherche assistée par IA : un système de recommandation transparent pour la recherche informationnelle exploratoire • Crieur Perso Test 1</title>
+  <!-- Lightest blank gif, avoids an extra query to the server. -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  
+  <link rel="stylesheet"
+        href="/statics/pico_sans_plus.css" />
+
+  
+    <link rel="stylesheet"
+          href="/statics/font_titrage.css" />
+    <link rel="stylesheet"
+          href="/statics/font_labeur.css" />
+  
+  <link rel="alternate" type="application/atom+xml"
+        title="Feed" href="/feed.xml">
+  <style type="text/css">
+    
+  
+      :root {
+        --pico-font-family: "noto_sansregular";
+        --pico-spacing: 0.25rem;
+      }
+      em, i {
+        font-family: "noto_sansitalic";
+        font-style: normal;
+      }
+      strong, b {
+        font-family: "noto_sansbold";
+        font-weight: normal;
+      }
+      h1, h3, h4, h5, h6 {
+        font-family: "adobe_caslon_probold_italic";
+        font-weight: normal;
+        font-style: normal;
+      }
+      h2 {
+        font-family: "adobe_caslon_prosemibold";
+        font-weight: normal;
+        font-style: normal;
+      }
+      h3 em, h3 i,
+      h4 em, h4 i,
+      h5 em, h5 i,
+      h6 em, h6 i,
+      nav {
+        font-family: "adobe_caslon_proregular";
+        font-weight: normal;
+        font-style: normal;
+      }
+      header:has(h1) {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: calc(var(--pico-block-spacing-vertical) * 4) auto calc(var(--pico-block-spacing-vertical) * 2) auto;
+        max-width: 40rem;
+      }
+      @media (min-width: 768px) {
+        header:has(h1) {
+          margin: calc(var(--pico-block-spacing-vertical) * 10) auto calc(var(--pico-block-spacing-vertical) * 2) auto;
+        }
+      }
+      header:has(h1):before,
+      header:has(h1):after {
+          content: '';
+          flex: 1;
+          height: var(--pico-border-width);
+          background-color: var(--pico-muted-border-color);
+          margin: 0 var(--pico-block-spacing-horizontal);
+      }
+      h1 {
+        margin: 0;
+      }
+      h1 a {
+        color: var(--pico-contrast);
+        text-decoration: none;
+      }
+      h1 a:hover {
+        text-decoration: underline;
+      }
+      dt {
+          font-weight: bold;
+      }
+      nav li a[aria-current] {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+      }
+      nav.header,
+      nav.footer {
+        text-align: center;
+        border-bottom-style: double;
+        border-bottom-color: var(--pico-muted-border-color);
+        max-width: 48rem;
+        margin: 0 auto calc(var(--pico-block-spacing-vertical) * 6) auto;
+        justify-content: center;
+      }
+      nav.footer {
+        margin: calc(var(--pico-block-spacing-vertical) * 6) auto calc(var(--pico-block-spacing-vertical) * 4) auto;
+        border-bottom: none;
+        border-top-style: double;
+        border-top-color: var(--pico-muted-border-color);
+        padding-top: var(--pico-block-spacing-vertical);
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li[aria-hidden="true"] {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        nav ol:last-of-type,
+        nav ul:last-of-type{
+          margin-right: 0;
+        }
+        nav ol:first-of-type,
+        nav ul:first-of-type{
+          margin-left: 0
+        }
+      }
+      @media (min-width: 768px) {
+        nav ul {
+          flex-direction: row;
+        }
+        nav ul li[aria-hidden="true"] {
+          display: initial;
+        }
+      }
+
+      nav li {
+        padding: 0 var(--pico-nav-element-spacing-horizontal);
+      }
+      footer nav ul {
+        margin: 0 auto !important;
+        text-align: center;
+      }
+      .centered {
+        text-align: center;
+      }
+      .muted {
+        color: var(--pico-muted-color) !important;
+      }
+      .border-muted {
+        color: var(--pico-muted-border-color);
+      }
+
+      .aside {
+        display: flex;
+        flex-direction: column;
+        margin-top: calc(var(--pico-block-spacing-vertical) * 10);
+        padding-bottom: calc(var(--pico-block-spacing-vertical) * 5);
+      }
+      .aside:not(:last-child) {
+        border-bottom-style: double;
+        border-bottom-color: var(--pico-muted-border-color);
+      }
+      .aside h2,
+      .aside hgroup {
+        padding-right: calc(var(--pico-block-spacing-horizontal) * 4);
+      }
+      .aside hgroup {
+        text-align: right;
+      }
+      .aside h2 a,
+      .aside h3 a {
+        color: var(--pico-contrast);
+      }
+      .aside ul {
+        border-left: var(--pico-border-width) solid var(--pico-muted-border-color);
+      }
+      @media (min-width: 768px) {
+        .aside {
+          flex-direction: row;
+        }
+        .aside h2,
+        .aside hgroup {
+          width: 15rem;
+          flex-shrink: 0;
+        }
+      }
+      @media (min-width: 992px) {
+        .aside h2,
+        .aside hgroup {
+          width: 20rem;
+        }
+      }
+
+      :root {
+        /* Grid adjustments, see
+        https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/
+        */
+        /**
+         * User input values.
+         */
+        --grid-layout-gap: 10px;
+        --grid-column-count: 1;
+        --grid-item--min-width: 100px;
+
+        /**
+         * Calculated values.
+         */
+        --gap-count: calc(var(--grid-column-count) - 1);
+        --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+        --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+      }
+
+      @media (min-width: 576px) {
+        :root {
+          --grid-column-count: 1;
+        }
+      }
+
+      @media (min-width: 768px) {
+        :root {
+          --grid-column-count: 2;
+        }
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+        grid-gap: var(--grid-layout-gap);
+      }
+
+      .grid article header {
+        text-align: center;
+      }
+
+      .grid h2, .grid h3 {
+        margin-bottom: 0;
+        margin-top: var(--pico-typography-spacing-vertical);
+      }
+      .grid ul.by-2 {
+        columns: 2;
+      }
+      .grid hgroup {
+        margin-bottom: 0;
+      }
+
+      .article-content {
+        min-height: 15rem;
+        padding: var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal);
+      }
+      .article-body {
+        border-left: var(--pico-border-width) solid var(--pico-muted-border-color);
+        padding-left: calc(var(--pico-nav-element-spacing-horizontal) * 2);
+        flex-grow: 1;
+      }
+      .article-body h2 {
+        width: initial;
+      }
+      .article-body figure {
+        margin: calc(var(--pico-nav-element-spacing-vertical) * 2) calc(var(--pico-nav-element-spacing-horizontal) * 2);
+        text-align: center;
+      }
+      .article-body img {
+        padding: 2px;
+        border-top: var(--pico-border-width) solid var(--pico-muted-border-color);
+        border-left: var(--pico-border-width) solid var(--pico-muted-border-color);
+        border-right: var(--pico-border-width) solid var(--pico-muted-border-color);
+      }
+      .article-body figcaption {
+        font-size: calc(var(--pico-font-size) * 0.6);
+        border-top-color: var(--pico-muted-border-color);
+        border-top-style: double;
+      }
+      .article-body pre {
+        max-width: 35rem;
+        overflow-x: scroll;
+      }
+
+      .article-nav {
+        text-align: right;
+      }
+      .article-nav [role="button"] {
+        padding: calc(var(--pico-form-element-spacing-vertical) / 2) var(--pico-form-element-spacing-horizontal);
+        margin: 0 0 calc(var(--pico-form-element-spacing-vertical) * 2) 0;
+      }
+
+      .article-abstract {
+        padding: calc(var(--pico-spacing) * 4);
+        border-color: var(--pico-muted-border-color);
+        border-style: double;
+        background-color: var(--pico-code-background-color);
+        margin-bottom: calc(var(--pico-form-element-spacing-vertical) * 2);
+      }
+
+      blockquote {
+        padding: calc(var(--pico-spacing) * 4);
+        border-left-style: double;
+      }
+
+      .linkified {
+        float: right;
+        padding-left: calc(var(--pico-spacing) * 4);
+      }
+      .linkified a {
+        text-decoration: none;
+      }
+      .linkified a::after {
+        content: "❡";
+        padding: 0 var(--pico-block-spacing-horizontal);
+        color: var(--pico-muted-border-color);
+      }
+      .linkified:hover a::after {
+        color: var(--pico-muted-color);
+      }
+      .linkified:target a::after {
+        color: var(--pico-mark-color);
+        background-color: var(--pico-mark-background-color);
+      }
+    
+  .article-body {
+    border-left: none;
+    padding-left: 0;
+  }
+  .aside h2, .aside hgroup {
+    padding-right: 0;
+  }
+  .noprint {
+    display: none;
+  }
+
+  </style>
+  
+  <link href="/statics/paged-interface-0.3.css" rel="stylesheet" type="text/css" />
+  <script src="/statics/paged-0.4.3.polyfill.min.js"></script>
+
+
+  <body>
+    <main class="container">
+      
+        <header>
+          <h1><a href="/" title="Retour à l’accueil">Crieur Perso Test 1</a></h1>
+        </header>
+      
+      
+        <nav class="header">
+          <ul class="noprint">
+            <li><a href="/numero/" >Par numéro</a></li>
+            <li class="muted" aria-hidden="true"> ⁙ </li>
+            <li><a href="/blog/" >Par date</a></li>
+            
+              <li class="muted" aria-hidden="true"> ⁙ </li>
+              <li><a href="/mot-clef/" >Par mot-clé</a></li>
+            
+            
+              <li class="muted" aria-hidden="true"> ⁙ </li>
+              <li><a href="/auteur/" >Par auteur·ice</a></li>
+            
+            
+              <li class="muted" aria-hidden="true"> ⁙ </li>
+              <li><a href="/recherche/" >Recherche</a></li>
+            
+          </ul>
+        </nav>
+      
+      <div class="content">
+        
+  <div class="aside">
+    <hgroup>
+      <h2>Agentivité épistémique et recherche assistée par IA : un système de recommandation transparent pour la recherche informationnelle exploratoire</h2>
+      <div>
+        <p></p>
+        <div class="muted">
+          
+            
+              <h4><em><a href="/auteur/alexia-schneider/">Alexia Schneider</a></em></h4>
+            
+              <h4><em><a href="/auteur/marcello-vitali-rosati/">Marcello Vitali-Rosati</a></em></h4>
+            
+              <h4><em><a href="/auteur/pierre-levy/">Pierre Lévy</a></em></h4>
+            
+          
+        </div>
+        <p class="muted">
+          <small>
+            <a href="/blog/#date-2026-05-13">13 mai 2026</a>
+            <small class="muted" aria-hidden="true"> ⁙ </small>
+            <a href="/numero/corpus-crieur-test/">Corpus Crieur Test</a>
+            
+              <small class="muted" aria-hidden="true"> ⁙ </small>
+              
+                <a href="/mot-clef/systeme-de-recommandation/">#système de recommandation</a>, 
+              
+                <a href="/mot-clef/recherche-d-information/">#recherche d'information</a>, 
+              
+                <a href="/mot-clef/ai-research-assistant/">#AI-research assistant</a>, 
+              
+                <a href="/mot-clef/recherche-exploratoire/">#recherche exploratoire</a>, 
+              
+                <a href="/mot-clef/recommender-system/">#recommender system</a>, 
+              
+                <a href="/mot-clef/ai-research-assistant/">#AI-research assistant</a>, 
+              
+                <a href="/mot-clef/exploratory-search-practices/">#exploratory search practices</a>, 
+              
+                <a href="/mot-clef/ieml/">#ieml</a>
+              
+            
+          </small>
+        </p>
+        
+        <p class="muted noprint">
+          <small>
+            ⎙ <a href="/numero/corpus-crieur-test/article/agentivite-epistemique-et-recherche-assistee-par-ia-un-systeme-de-recommandation-transparent-pour-la-recherche-informationnelle-exploratoire/print/">Imprimer l’article</a>
+          </small>
+        </p>
+      </div>
+    </hgroup>
+    <div class="article-body">
+      
+        <div class="article-abstract"><p>Information retrieval tools in academic contexts filter and rank what
+researchers read and cite, thereby influencing scientific innovation and
+the citation dynamics that shape research. Current &quot;AI research
+assistants&quot; rely on a natural language querying strategy interpreted by
+a large language model ; this paradigm, which appears to attract the
+majority of information retrieval resources today, raises questions
+about the epistemological impact of interpretations performed by tools
+whose black-box effect is well-documented. This paper presents a
+recommender system appended to the specialized scientific search engine
+Isidore, tool designed as a concrete alternative to natural language
+querying. First, we will present the functionalities of the recommender
+system developed in this project: constructing a query through iterative
+interactions involving terms and definitions using the IEML language;
+comparing result lists displayed side-by-side from the user-constructed
+query and the same query &quot;augmented&quot; by an LLM. Second, we will present
+the evaluation of the semantic parsing into IEML performed by an LLM on
+a corpus of 360 terms, as well as the results of a small sample user
+study.</p>
+</div>
+      
+
+      <h1>Introduction&nbsp;: le problème de la recherche assistée par IA opaque</h1>
+<p>Les systèmes de recommandation (SR) intégrés aux moteurs de recherche
+scientifiques influencent ce que les chercheur·e·s voient, lisent et
+citent. Pourtant, ces systèmes rendent rarement explicites les
+stratégies de recherche d'information (RI) à l'origne des articles
+présentés. En conséquence, les SR reposent fréquemment sur des métriques
+non sémantiques telles que le nombre de citations, renforçant des
+mécanismes de concentration des citations, également connus sous le nom
+de <em>Matthew's effect</em> (<a href="#ref_mertonmattheweffectscience1968" id="anchor_mertonmattheweffectscience1968">Merton, 1968</a>). D'autres
+systèmes dépendent fortement des interactions passées et enregistrées
+des utilisateur·ice·s (<a href="#ref_kosterserendipitousrecommendationbased2014" id="anchor_kosterserendipitousrecommendationbased2014">Koster et al., 2014</a>),
+créant des risques de bulles de filtres (<a href="#ref_pariserfilterbubblewhat2011" id="anchor_pariserfilterbubblewhat2011">Pariser, 2011</a>)
+et de biais de confirmation dans le travail scientifique
+(<a href="#ref_underwoodtheorizingresearchpractices2014" id="anchor_underwoodtheorizingresearchpractices2014">Underwood, 2014</a>).</p>
+<p>Le glissement actuel vers des &quot;assistants IA&quot; conversationnels, reposant
+sur un paradigme générique de requêtes en langue naturelle analysées par
+des grands modèles de langue (GML), rend de plus en plus pressantes les
+questions de modélisation alternative, d'interprétabilité et
+d'agentivité épistémique que les Humanités Numériques adressent
+(<a href="#ref_goodladeditorsintroductionhumanities2023" id="anchor_goodladeditorsintroductionhumanities2023">Goodlad, 2023</a>; <a href="#ref_vitali-rosatimanifestepouretudes2025a" id="anchor_vitali-rosatimanifestepouretudes2025a">Vitali-Rosati, 2025</a>).
+Si les mécanismes derrière les recommandations générées par l'IA
+demeurent opaques, les chercheur·e·s perdent la capacité d'évaluer de
+manière critique la façon dont la pertinence est construite.</p>
+<p>Notre question de recherche principale est la suivante&nbsp;: quelle
+alternative aux assistants de recherche IA peut être conçue afin de
+mettre en avant des connexions inattendues de manière explicable et
+transparente pour l'utilisateur·ice&#8239;? Pour donner plus de perspective à
+cette question&nbsp;: qu'est-ce qu'une comparaison directe entre une
+ontologie symbolique et une recherche sémantique fondée sur les GML peut
+révéler sur leurs modèles épistémiques sous-jacents&#8239;?</p>
+<p>Ancrée dans les propositions de
+(<a href="#ref_druckerperformativematerialitytheoretical2013" id="anchor_druckerperformativematerialitytheoretical2013">Drucker, 2013</a>), l'outil développé pour
+répondre à ces questions se veut un révélateur d'incertitudes et
+d'interprétations subjectives afin de sensibiliser à la littératie en
+IA. Nous présentons ainsi <code>IEML-RS</code>, un SR reposant sur un processus
+collaboratif et itératif de construction de requêtes pour une phase de
+recherche d'information exploratoire réflechie et transparente. Nous
+présentons dans un deuxième temps l'évaluation de l'outil à travers les
+résultats d'une étude utilisateur et sur l'évaluation technique du
+parsing sémantique en IEML produit par des GML.</p>
+<h1>Contexte et état de l'art</h1>
+<p>Les outils récents de recherche assistée par IA fonctionnent sur
+l'utilisation de GML pour l'expansion de requêtes, le classement de
+pertinence et la synthèse automatisée, à toutes ces étapes, les &quot;choix&quot;
+du modèle sont probabilistes; l'hypothèse distributionnelle
+(<a href="#ref_firthstudieslinguisticanalysis1962" id="anchor_firthstudieslinguisticanalysis1962">Firth, 1962</a>; <a href="#ref_harrisdistributionalstructure1981" id="anchor_harrisdistributionalstructure1981">Harris, 1981</a>)
+au coeur de ces algorithmes et de l'IA connexionniste suppose que les
+fréquences de cooccurrences d'unités syntaxiques permettent à
+elles-seules de reconstruire la langue et indirectement, ses aspects
+sémantiques.</p>
+<p>Bien qu'efficace pour la production de texte, cette approche renforce
+implicitement les connexions et les chemins sémantiques les plus
+probables, ce qui dans le cas de la publication académique risque de
+privilégier une littérature déjà citée et de réduire l'espace
+épistémique de la découverte
+(<a href="#ref_nielsenglobalcitationinequality2021" id="anchor_nielsenglobalcitationinequality2021">Nielsen &amp; Andersen, 2021</a>; <a href="#ref_varganarrowingliteratureuse2022" id="anchor_varganarrowingliteratureuse2022">Varga, 2022</a>).
+Les évaluations des assistants de recherche fondés sur l'IA montrent
+également une opacité persistante, un rappel inégal et une tendance à
+survaloriser les travaux dominants ou fortement cités
+(<a href="#ref_pattersonwhichaitools2025" id="anchor_pattersonwhichaitools2025">Patterson et al., 2025</a>; <a href="#ref_archambaultevaluationcuttingedgeai2024" id="anchor_archambaultevaluationcuttingedgeai2024">Archambault &amp; Rincón, 2024</a>).
+Comme le soutient (<a href="#ref_tayreproducibilityinterpretabilityacademic2025" id="anchor_tayreproducibilityinterpretabilityacademic2025">Tay, 2025</a>), le
+manque de transparence des systèmes contemporains de RI fondés sur les
+GML complique la capacité des utilisateur·ice·s à évaluer de manière
+critique les résultats, soulignant la nécessité d'approches mettant au
+premier plan l'explicabilité et l'agentivité des utilisateur·ice·s.</p>
+<p>En tant qu'objectif, la sérendipité et la recherche exploratoire
+proposent un paradigme alternatif dans la construction des SR. Des
+travaux fondateurs conceptualisent la sérendipité comme un processus
+itératif mené par l'utilisateur·ice, de &quot;<em>berrypicking</em>&quot;, dans lequel
+les requêtes évoluent par variantes au fil d'un parcours non linéaire
+alternant rencontres de documents et d'idées
+(<a href="#ref_batesdesignbrowsingberrypicking1989" id="anchor_batesdesignbrowsingberrypicking1989">Bates, 1989</a>; <a href="#ref_erdelezinformationencounteringits1999" id="anchor_erdelezinformationencounteringits1999">Erdelez, 1999</a>).
+Des modèles ultérieurs soulignent la nature évaluative et définie par
+l'utilisateur·ice de la sérendipité&nbsp;: une découverte ne devient
+&quot;trouvaille&quot; qu'a posteriori, lorsqu'on est à même de réinterprèter sa
+pertinence
+(<a href="#ref_lawleymaximisingserendipityart2008" id="anchor_lawleymaximisingserendipityart2008">Lawley &amp; Tompkins, 2008</a>; <a href="#ref_makricominginformationserendipitously2012" id="anchor_makricominginformationserendipitously2012">Makri &amp; Blandford, 2012</a>).
+Des études empiriques en contexte académique confirment le rôle de la
+sérendipité dans la diversification des pratiques de lecture et le
+développement d'expertises transdisciplinaires
+(<a href="#ref_fosterserendipityinformationseeking2003" id="anchor_fosterserendipityinformationseeking2003">Foster &amp; Ford, 2003</a>). Des exemples d'appropriation
+détournée des fonctionnalités principales des moteurs de recherche
+suggèrent que les pratiques effectives de recherche restent encore
+largement non cartographiées et plus diverses que ne le laissent
+entendre les pratiques guidées actuelles de RI
+(<a href="#ref_dumasprimbaultnaviguerdanssavoirs2023" id="anchor_dumasprimbaultnaviguerdanssavoirs2023">Dumas Primbault, 2023</a>). Pourtant, la majorité des SR
+demeurent orientée vers la personnalisation et l'interrogation en langue
+naturelle, visant une RI intuitive plutôt qu'une exploration étendue ou
+un soutien à l'engagement des chercheur·se·s dans la complexité de leurs
+propres investigations.</p>
+<p>Quelques outils scientifiques tentent de réintroduire l'exploration dans
+la RI pour la recherche scientifique. <code>Bridger</code>
+(<a href="#ref_portenoyburstingscientificfilter2022" id="anchor_portenoyburstingscientificfilter2022">Portenoy et al., 2022</a>) expose les chercheur·se·s à des
+auteur·ice·s extérieur·e·s à leurs réseaux intellectuels habituels afin
+de favoriser le décloisonnement disciplinaire. <code>VITALITY</code>
+(<a href="#ref_narechaniavitalitypromotingserendipitous2022" id="anchor_narechaniavitalitypromotingserendipitous2022">Narechania et al., 2022</a>) propose une approche de
+revue de littérature fondée sur la visualisation, mais repose sur des
+corpus fortement sélectionnés et prétraités. D'autres projets, tels que
+<code>STAK</code> (<a href="#ref_martinstakserendipitoustool2017" id="anchor_martinstakserendipitoustool2017">Martin et al., 2017</a>), s'est inspiré des affordances
+matérielles des bibliothèques physiques en tentant de recréer des
+environnements de navigation spatialisés.</p>
+<p>+-------------------------------------+----------------------------------+
+|   ------------- ------------------- | Les alternatives aux approches   |
+|    <strong>Mot-clé</strong>     <strong>conteuse</strong>     | fondées sur les GML incluent les |
+|       Thème        communication    | graphes de connaissances et les  |
+|        Qui       ~féminin conteur  | ontologies du Web sémantique. Au |
+|       Quoi             récit        | sein des représentations         |
+|       À qui                         | sémantiques symboliques, OWL et  |
+|     Par quoi                        | RDF sont des formalismes bien    |
+|       Quand                         | établis, et l'Information        |
+|        Où                           | Economy MetaLanguage (IEML)      |
+|     Pourquoi                        | (<a href="#ref_levysemanticcomputingieml2023" id="anchor_levysemanticcomputingieml2023">Lévy, 2023</a>) |
+|      Comment                        | bien que moins connu, offre une  |
+|   ------------- ------------------- | alternative flexible pertinente  |
+|                                     | pour l'exploration de champs     |
+|  &nbsp;: Décomposition sémantique avec   | conceptuel. IEML est un langage  |
+|   IEML                              | d'explicitation sémantique       |
+|                                     | fondée sur une logique de        |
+|                                     | composition à partir d'unités    |
+|                                     | sémantiques prédéfinies. Les     |
+|                                     | dimensions sémantiques           |
+|                                     | constituent une ontologie fixe   |
+|                                     | de neuf aspects                  |
+|                                     | (thème/processus, qui, quoi, à   |
+|                                     | qui, par quels moyens, quand,    |
+|                                     | où, pourquoi, comment)           |
+|                                     | permettant des définitions       |
+|                                     | flexibles et heuristiques de     |
+|                                     | tout concept dans une structure  |
+|                                     | aisément intelligible et         |
+|                                     | manipulable.                     |
++-------------------------------------+----------------------------------+</p>
+<p>[]{#tabl-ieml}</p>
+<p>Le Tableau <!-- [@tabl-ieml]--> offre une visualisation explicite d'une traduction attendue en IEML du concept de &quot;conteuse&quot;&nbsp;: tous les aspects ne sont pas obligatoirement remplis et la flexion d'une valeur peut être signifiée
+par le symbole <code>~</code>.</p>
+<p>Alors que les GML sont de plus en plus utilisés pour des tâches
+complexes de <em>parsing</em> sémantique non structuré, des évaluations
+récentes montrent qu'ils demeurent peu fiables pour les langages
+sémantiques structurés. Par exemple, les modèles d'OpenAI ont obtenu de
+faibles performances dans la génération d'Abstract Meaning
+Representation (AMR), même avec quelques exemples dans le prompt
+(<a href="#ref_ettingeryouareexpert2023" id="anchor_ettingeryouareexpert2023">Ettinger et al., 2023</a>). Cela renforce la nécessité de cadres
+sémantiques explicites et interprétables dans la RI scientifique.
+Contrairement à la représentation canonique unique de l'AMR, IEML
+propose une décomposition sémantique flexible et ajustable par
+l'utilisateur·ice, susceptible de soutenir la variation exploratoire.
+Cependant, aucun travail antérieur n'a examiné la traduction automatique
+en IEML ni son intégration dans des systèmes de recommandation.</p>
+<p>Ensemble, ces lacunes motivent la nécessité de SR transparents et ancrés
+dans une logique interprétative, qui préservent le contrôle des
+utilisateur·ice·s, soutiennent la variation exploratoire et rendent
+visibles les différences épistémiques entre approches symboliques et
+connexionnistes. L'outil <code>IEML-RS</code> contribue à cet espace en offrant une
+comparaison double, côte à côte, entre une recherche fondée sur
+l'ontologie et une recherche sémantique fondée sur les GML dans un
+contexte réel de découverte scientifique.</p>
+<h1>IEML-RS</h1>
+<p>Notre système de recommandation d'articles est une extension du
+navigateur Firefox en Javascript qui dialogue avec le moteur de
+recherche <a href="https://isidore.science">Isidore</a> pour les SHS francophones
+via son site web (en extrayant les métadonnées de l'article de départ)
+et son API (fonction de recherche d'articles par mots-clés).
+L'utilisateur·ice commence sur une page d'article dont les métadonnées
+sont extraites. Les mots-clés dont une traduction validée manuellement
+existe sont présentés en bleus, les autres sont en oranges.</p>
+<p>::: {.columns-flow count=&quot;2&quot;}</p>
+<p>[]{#grid}</p>
+<!-- fig width=65% -->
+
+<p>La sélection d'un mot-clé fait apparaître son forme de grille sa
+traduction en IEML, soit sous forme validée (mots-clés bleus), soit sous
+forme de grille à corriger (mots-clés oranges). La sélection d'une
+cellule de la grille fait apparaître tous les mots-clés utilisant le
+même concept. Dans l'exemple de la <a href="#grid">fig.</a>{.ref}, la sélection de
+la facette thème &quot;théorie&quot; du mot-clé &quot;éditorialisation&quot; révèle que les
+mots-clés &quot;auctorialité&quot;, &quot;corpus littéraire&quot;, &quot;herméneutique&quot; etc. sont
+aussi traduits avec &quot;théorie&quot; dans leur grille IEML. En proposant une
+conceptualisation simple sous la forme d'une grille qu'il est possible à
+son tour de remplir, les utilisateur·ice·s non familier·e·s avec IEML
+peuvent aisément établir des connexions sémantiques complexes tout en
+apprenant à utiliser le SR.
+:::</p>
+<p>::: {.columns-flow count=&quot;2&quot;}</p>
+<p>[]{#trad-ieml}</p>
+<!--fig width=65% -->
+
+<p>L'un des intérêt saillant du RS repose dans la portée reflexive du
+processus de construction de la requête, processus qui émane de la
+matrice de décomposition sémantique en IEML (voir (<a href="#ref_tabl-ieml" id="anchor_tabl-ieml">tabl-ieml?</a>)) mais
+aussi de la traduction automatique en IEML d'un mot-clé générée par
+<code>gemma-3n-E4B-it</code> (voir <a href="#trad-ieml">figure</a>{.ref}). Correction et
+validation par l'utilisateur·ice de la grille pré-remplie par GML
+impliquent une forme de mise en dialogue réflexive non seulement avec le
+concept sélectionné mais aussi, indirectement, avec le GML qui a produit
+la proposition de traduction.</p>
+<p>:::</p>
+<p>L'utilisateur·ice construit sa requête sur la base des concepts et
+mots-clés sélectionnés dans cette phase itérative d'exploration (la
+sélection est visible en vert sur la <a href="#panels">figure</a>{.ref}). Le
+lancement d'une recherche d'articles laisse voir les panels listant les
+résultats des requêtes permettant ainsi une visualisation de l'impact
+habituellement invisible de la médiation par les GML dans les pratiques
+de recherche (<a href="#panels">[panels]</a>{.ref}).</p>
+<p>[]{#panels}</p>
+<h1>Évaluations</h1>
+<h2>Évaluation de GML pour le parsing sémantique en IEML</h2>
+<p>L'une des principales fonctionnalités du SR est la traduction
+collaborative homme-machine en IEML proposée pour des mots-clés absents
+de la base de données validée manuellement des concepts en IEML. Cette
+fonctionnalité repose sur une traduction proposée par un GML que
+l'utilisateur·ice peut corriger (<a href="#trad-ieml">[trad-ieml]</a>{.ref}). Ces
+mots-clés corrigés et validés sont ensuite ajoutés à la base de données
+IEML, conformément à la notion d'intelligence collective affirmée par le
+concepteur d'IEML (<a href="#ref_levycollectiveintelligencemankinds1997" id="anchor_levycollectiveintelligencemankinds1997">Lévy, 1997</a>).</p>
+<p>model                 BLEU avg   cosine avg   avg</p>
+<hr />
+<p>noRAG llama_fewshot   5.6e-2     0.515        0.286
+llama_zeroshot        1.3e-2     0.514        0.263
+gemma_zeroshot        1.6e-2     0.479        0.248
+openai_zeroshot       1.6e-2     0.493        0.255
+llama_fewshot         2.2e-2     0.555        0.289
+gemma_fewshot         2.0e-2     0.491        0.255
+openai_fewshot        1.7e-2     0.498        0.257</p>
+<p>: Résultat des traductions en IEML par GML de 360&nbsp;mots-clés</p>
+<p>[]{#rag-eval}</p>
+<p>Pour cette tâche, nous avons évalué trois GML propriétaires
+(<a href="https://huggingface.co/openai/gpt-oss-20b"><code>GPT-oss-20B</code></a>,
+<a href="https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct"><code>Meta-Llama-3-70B-Instruct-Turbo</code></a>,
+<a href="https://huggingface.co/google/gemma-3n-E4B-it"><code>Gemma-3n-E4V-it</code></a>) sur
+leur capacité à traduire 360&nbsp;mots-clés en IEML partant d'un système de
+génération augmentée de récupération (<em>RAG</em>) avec un prompt contenant 60
+exemples et une récupération de 20&nbsp;mots sélectionnés dans le
+dictionnaire IEML (~3&#8239;000&nbsp;entrées). Les scores quantitatifs montrent
+des gains négligeables avec les exemples contextuels
+(<a href="#rag-eval">[rag-eval]</a>{.ref}), et l'analyse qualitative a confirmé
+que les modèles échouent à reproduire les contraintes structurelles
+d'IEML. Les mesures de distances sémantiques (cosine et score BLEU) ne
+conviennent que partiellement à l'évaluation de la traduction; la
+comparaison de vecteurs ne rend pas compte de l'intérêt de la
+concaténation de concepts sémantiques possiblement éloignés mais
+pertinents dans une traduction en IEML. Cela confirme les résultats de
+(<a href="#ref_ettingeryouareexpert2023" id="anchor_ettingeryouareexpert2023">Ettinger et al., 2023</a>) sur les limites des GML pour le <em>parsing</em>
+sémantique structuré, et souligne l'importance de la validation humaine
+pour ce type de tâche. Ce résultat oriente nos perspectives vers de
+futurs designs de SR intégrant les retours et interprétations humaines,
+deux processus cognitifs fondamentaux de la découverte informationnelle
+fortuite (<a href="#ref_makricominginformationserendipitously2012" id="anchor_makricominginformationserendipitously2012">Makri &amp; Blandford, 2012</a>).</p>
+<h2>Étude utilisateur</h2>
+<h3>Méthodologie</h3>
+<p>Après l'installation et une démonstration de l'ensemble des
+fonctionnalités du SR, six utilisateur·ice·s volontaires ont été
+observé·e·s lors d'une session de 10&nbsp;minutes d'interaction avec le
+plugiciel, suivie d'un entretien de 15&nbsp;minutes couvrant les
+fonctionnalités et aspects centraux&nbsp;: ergonomie, utilité, navigation par
+mots-clés, traduction en IEML, recherche d'articles et comparaison des
+panels de listes d'articles extraits.</p>
+<p>Les utilisateur·ice·s étaient six doctorant·e·s en humanités numériques
+et connaissaient tous les développeur·se·s. Les auteur·ice·s
+reconnaissent que ces deux éléments constituent des biais importants de
+cette étude et en limitent la portée analytique.</p>
+<h1>Résultats et discussion</h1>
+<p>Les observations issues de l'expérience indiquent que tous les
+participant·e·s ont extrait des articles via le SR, suggérant que
+l'outil a facilité l'accès à une littérature auparavant inconnue, y
+compris pour celles et ceux qui ne recourent pas habituellement à la
+recherche par mots-clés. Bien que tous les utilisateur·ice·s aient
+formulé plusieurs requêtes et comparé les listes d'articles à des degrés
+divers, un seul s'est engagé de manière équivalente dans les deux
+étapes. Tous sauf un ont corrigé les traductions générées par les LLM,
+et une participante les a annotées plutôt que remplacées, indiquant que
+des productions de faible qualité peuvent susciter une posture
+dialogique et collaborative vis-à-vis des tâches sémantiques. De telles
+traductions imparfaites semblent favoriser la réflexivité dans
+l'articulation de concepts sémantiquement riches et soutenir
+l'appropriation de l'outil par l'utilisateur·ice. Étant donné le nombre
+limité de mots-clés prétraduits (420&nbsp;au moment de la rédaction), les
+utilisateur·ice·s ont fréquemment rencontré des concepts &quot;non traduits&quot;;
+loin de constituer une simple contrainte, cette lacune représente une
+opportunité de renforcer l'agentivité des utilisateur·ice·s en les
+invitant à formuler el·eux-mêmes les correspondances conceptuelles
+manquantes en IEML et à participer à l'appropriation du SR.</p>
+<p>Les participant·e·s ont recommandé diverses améliorations fonctionnelles
+et ajustements UX, mais de nombreuses limites semblent résolubles par
+une intégration directe à Isidore (par exemple&nbsp;: maintien de l'état de
+session, fiches de métadonnées complètes, distinction plus claire entre
+la construction de requêtes et la récupération de documents, et
+réduction de la latence causée par les appels d'API en chaîne). Les
+forces et limites du SR développé seront détaillées lors de la
+conférence.</p>
+<h1>Perspectives</h1>
+<p>À notre connaissance, cet outil constitue la première application de
+construction de requêtes impliquant une conceptualisation sémantique
+réalisée de manière collaborative par un humain et un LLM.&nbsp;Nous tenons
+que les SR peuvent être des outils critiques qui exposent, plutôt que
+dissimulent, les différences de modélisation en amont de la RI
+(ontologie vs hypothèse distributionnelle). Dans cette perspective, le
+travail amorcé tant lors du développement de notre RS que lors de son
+évaluation laisse voir que les pratiques de recherche informationnelle
+demeurent variées et qu'il y a encore une place pour la recherche
+réflexive en contexte scientifique. De futurs travaux pourraient mettre
+à profit cette construction itérative d'une requête dans un contexte
+exploratoire pour valoriser et permettre à l'utilisateur·ice de définir
+plus clairement ses intentions, intentionalités floues notamment
+observées dans les usages d'interaction en langue naturelle avec les
+GML (<a href="#ref_subramonyambridginggulfenvisioning2024" id="anchor_subramonyambridginggulfenvisioning2024">Subramonyam et al., 2024</a>).</p>
+<h1>Bibliographie</h1>
+<section id="bibliography">
+<ul>
+    <li>
+        <span id="ref_mertonmattheweffectscience1968">
+            Merton, R. K. (1968). The Matthew effect in science. The reward and communication systems of science are considered. <i>Science (New York, N.Y.)</i>, <i>159</i>(3810), 56‑63.
+            <a href="#anchor_mertonmattheweffectscience1968">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_kosterserendipitousrecommendationbased2014">
+            Koster, A., Koch, F., &amp; Kim, Y. B. (2014). Serendipitous Recommendation Based on Big Context. In A. L. C. Bazzan &amp; K. Pichara (Éds.), <i>Advances in Artificial Intelligence – IBERAMIA 2014</i> (p.  319‑330). Springer International Publishing. https://doi.org/10.1007/978-3-319-12027-0_26
+            <a href="#anchor_kosterserendipitousrecommendationbased2014">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_pariserfilterbubblewhat2011">
+            Pariser, E. (2011, mai). <i>The Filter Bubble: What the Internet Is Hiding from You</i>.
+            <a href="#anchor_pariserfilterbubblewhat2011">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_underwoodtheorizingresearchpractices2014">
+            Underwood, T. (2014). Theorizing Research Practices We Forgot to Theorize Twenty Years Ago. <i>Representations</i>, <i>127</i>(1), 64‑72. https://doi.org/10.1525/rep.2014.127.1.64
+            <a href="#anchor_underwoodtheorizingresearchpractices2014">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_goodladeditorsintroductionhumanities2023">
+            Goodlad, L. M. E. (2023). Editor's Introduction: Humanities in the Loop. <i>Critical AI</i>, <i>1</i>(1-2). https://doi.org/10.1215/2834703X-10734016
+            <a href="#anchor_goodladeditorsintroductionhumanities2023">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_vitali-rosatimanifestepouretudes2025a">
+            Vitali-Rosati, M. (2025). <i>Manifeste pour des Études Critiques de l'Intelligence Artificielle</i>.
+            <a href="#anchor_vitali-rosatimanifestepouretudes2025a">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_druckerperformativematerialitytheoretical2013">
+            Drucker, J. (2013). Performative Materiality and Theoretical Approaches to Interface. <i>Digital Humanities Quarterly</i>, <i>7</i>(1).
+            <a href="#anchor_druckerperformativematerialitytheoretical2013">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_firthstudieslinguisticanalysis1962">
+            Firth, J. R. (1962). <i>Studies in linguistic analysis</i> (Repr). Blackwell.
+            <a href="#anchor_firthstudieslinguisticanalysis1962">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_harrisdistributionalstructure1981">
+            Harris, Z. S. (1981). Distributional Structure. <i>Papers on Syntax</i>, 3‑22. https://doi.org/10.1007/978-94-009-8467-7_1
+            <a href="#anchor_harrisdistributionalstructure1981">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_nielsenglobalcitationinequality2021">
+            Nielsen, M. W., &amp; Andersen, J. P. (2021). Global citation inequality is on the rise. <i>Proceedings of the National Academy of Sciences</i>, <i>118</i>(7), e2012208118. https://doi.org/10.1073/pnas.2012208118
+            <a href="#anchor_nielsenglobalcitationinequality2021">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_varganarrowingliteratureuse2022">
+            Varga, A. (2022). The narrowing of literature use and the restricted mobility of papers in the sciences. <i>Proceedings of the National Academy of Sciences</i>, <i>119</i>(17), e2117488119. https://doi.org/10.1073/pnas.2117488119
+            <a href="#anchor_varganarrowingliteratureuse2022">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_pattersonwhichaitools2025">
+            Patterson, B., Flores, C., Hauschild, N., &amp; Branch, J. (2025). Which AI Tools Work Best for Research? Using Librarian and Student Perspectives to Inform a Rating Rubric. <i>Journal of Electronic Resources in Medical Libraries</i>, <i>22</i>(3), 133‑138. https://doi.org/10.1080/15424065.2025.2546052
+            <a href="#anchor_pattersonwhichaitools2025">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_archambaultevaluationcuttingedgeai2024">
+            Archambault, S., &amp; Rincón, J. (2024). An Evaluation of Cutting-Edge AI Research Tools Using the REACT Framework. <i>Computers in Libraries</i>, <i>44</i>(8).
+            <a href="#anchor_archambaultevaluationcuttingedgeai2024">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_tayreproducibilityinterpretabilityacademic2025">
+            Tay, A. (2025). <i>The reproducibility and interpretability of academic AI search engines like Primo Research Assistant, Web of Science Research Assistant, Scopus AI and more</i>.
+            <a href="#anchor_tayreproducibilityinterpretabilityacademic2025">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_batesdesignbrowsingberrypicking1989">
+            Bates, M. J. (1989). The design of browsing and berrypicking techniques for the online search interface. <i>Online Review</i>, <i>13</i>(5), 407‑424. https://doi.org/10.1108/eb024320
+            <a href="#anchor_batesdesignbrowsingberrypicking1989">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_erdelezinformationencounteringits1999">
+            Erdelez, S. (1999). Information Encountering: It's More Than Just Bumping into Information. <i>Bulletin of the American Society for Information Science and Technology</i>, <i>25</i>(3), 26‑29. https://doi.org/10.1002/bult.118
+            <a href="#anchor_erdelezinformationencounteringits1999">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_lawleymaximisingserendipityart2008">
+            Lawley, J., &amp; Tompkins, P. (2008). <i>Maximising Serendipity: The art of recognising and fostering potential</i>.
+            <a href="#anchor_lawleymaximisingserendipityart2008">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_makricominginformationserendipitously2012">
+            Makri, S., &amp; Blandford, A. (2012). Coming across information serendipitously – Part 1: A process model. <i>Journal of Documentation</i>, <i>68</i>(5), 684‑705. https://doi.org/10.1108/00220411211256030
+            <a href="#anchor_makricominginformationserendipitously2012">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_fosterserendipityinformationseeking2003">
+            Foster, A., &amp; Ford, N. (2003). Serendipity and information seeking: An empirical study. <i>Journal of Documentation</i>, <i>59</i>(3), 321‑340. https://doi.org/10.1108/00220410310472518
+            <a href="#anchor_fosterserendipityinformationseeking2003">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_dumasprimbaultnaviguerdanssavoirs2023">
+            Dumas Primbault, S. (2023). Naviguer dans les savoirs à l'ère numérique. Pour une ethnographie des pratiques informationnelles sur Gallica. <i>Études De Communication. Langages, Information, Médiations</i>, <i>61</i>, 61‑89. https://doi.org/10.4000/edc.16108
+            <a href="#anchor_dumasprimbaultnaviguerdanssavoirs2023">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_portenoyburstingscientificfilter2022">
+            Portenoy, J., Radensky, M., West, J. D., Horvitz, E., Weld, D. S., &amp; Hope, T. (2022). Bursting Scientific Filter Bubbles: Boosting Innovation via Novel Author Discovery. <i>CHI Conference on Human Factors in Computing Systems</i>, 1‑13. https://doi.org/10.1145/3491102.3501905
+            <a href="#anchor_portenoyburstingscientificfilter2022">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_narechaniavitalitypromotingserendipitous2022">
+            Narechania, A., Karduni, A., Wesslen, R., &amp; Wall, E. (2022). VITALITY: Promoting Serendipitous Discovery of Academic Literature with Transformers & Visual Analytics. <i>IEEE Transactions on Visualization and Computer Graphics</i>, <i>28</i>(1), 486‑496. https://doi.org/10.1109/TVCG.2021.3114820
+            <a href="#anchor_narechaniavitalitypromotingserendipitous2022">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_martinstakserendipitoustool2017">
+            Martin, K., Greenspan, B., &amp; Quan-Haase, A. (2017). STAK – Serendipitous tool for augmenting knowledge: A conceptual tool for bridging digital and physical resources. <i>Digital Studies / Le Champ Numérique</i>, <i>6</i>(1). https://doi.org/10.16995/dscn.265
+            <a href="#anchor_martinstakserendipitoustool2017">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_levysemanticcomputingieml2023">
+            Lévy, P. (2023). Semantic computing with IEML. <i>Collective Intelligence</i>, <i>2</i>(4), 26339137231207634. https://doi.org/10.1177/26339137231207634
+            <a href="#anchor_levysemanticcomputingieml2023">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_ettingeryouareexpert2023">
+            Ettinger, A., Hwang, J. D., Pyatkin, V., Bhagavatula, C., &amp; Choi, Y. (2023). <i>"You Are An Expert Linguistic Annotator": Limits of LLMs as Analyzers of Abstract Meaning Representation</i>. https://doi.org/10.48550/ARXIV.2310.17793
+            <a href="#anchor_ettingeryouareexpert2023">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_levycollectiveintelligencemankinds1997">
+            Lévy, P. (1997). <i>Collective Intelligence: Mankind's Emerging World in Cyberspace</i> (Plenum Trade).
+            <a href="#anchor_levycollectiveintelligencemankinds1997">↩</a>
+        </span>
+    </li><li>
+        <span id="ref_subramonyambridginggulfenvisioning2024">
+            Subramonyam, H., Pea, R., Pondoc, C., Agrawala, M., &amp; Seifert, C. (2024). Bridging the Gulf of Envisioning: Cognitive Challenges in Prompt Based Interactions with LLMs. <i>Proceedings of the CHI Conference on Human Factors in Computing Systems</i>, 1‑19. https://doi.org/10.1145/3613904.3642754
+            <a href="#anchor_subramonyambridginggulfenvisioning2024">↩</a>
+        </span>
+    </li>
+</ul>
+</section>
+
+    </div>
+  </div>
+
+      </div>
+      
+      <nav class="footer">
+        <p> Ici ajout</p>
+        <h5>
+        <a href="/feed.xml" title="Flux RSS" aria-label="S'abonner au flux RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false" style="vertical-align: middle;">
+            <circle cx="3" cy="13" r="2" fill="currentColor"/>
+            <path d="M1 7a7 7 0 0 1 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 3a11 11 0 0 1 11 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          RSS
+        </a>
+        </h5>
+              </nav>
+      
+    </main>
+    
+    
+  </body>
+</html>

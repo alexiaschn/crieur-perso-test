@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr">
-  <id>/</id>
+  <id>https://alexiaschn.github.io/crieur-perso-test/</id>
   <title>Crieur Perso Test 1</title>
-  <updated>2026-05-13T11:47:33.784810+00:00</updated>
-  <link href="/" rel="alternate"/>
-  <link href="/feed.xml" rel="self"/>
+  <updated>2026-05-13T11:51:08.342151+00:00</updated>
+  <link href="https://alexiaschn.github.io/crieur-perso-test/" rel="alternate"/>
+  <link href="https://alexiaschn.github.io/crieur-perso-test/feed.xml" rel="self"/>
   <generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator>
   <entry>
-    <id>/numero/corpus-crieur-test/article/agentivite-epistemique-et-recherche-assistee-par-ia-un-systeme-de-recommandation-transparent-pour-la-recherche-informationnelle-exploratoire/</id>
+    <id>https://alexiaschn.github.io/crieur-perso-test/numero/corpus-crieur-test/article/agentivite-epistemique-et-recherche-assistee-par-ia-un-systeme-de-recommandation-transparent-pour-la-recherche-informationnelle-exploratoire/</id>
     <title>Agentivité épistémique et recherche assistée par IA : un système de recommandation transparent pour la recherche informationnelle exploratoire</title>
     <updated>2026-05-13T00:00:00-04:00</updated>
     <author>
@@ -19,7 +19,7 @@
     <author>
       <name>Pierre Lévy</name>
     </author>
-    <link href="/numero/corpus-crieur-test/article/agentivite-epistemique-et-recherche-assistee-par-ia-un-systeme-de-recommandation-transparent-pour-la-recherche-informationnelle-exploratoire/"/>
+    <link href="https://alexiaschn.github.io/crieur-perso-test/numero/corpus-crieur-test/article/agentivite-epistemique-et-recherche-assistee-par-ia-un-systeme-de-recommandation-transparent-pour-la-recherche-informationnelle-exploratoire/"/>
     <summary type="html">&lt;h1&gt;Introduction&amp;nbsp;: le problème de la recherche assistée par IA opaque&lt;/h1&gt;
 &lt;p&gt;Les systèmes de recommandation (SR) intégrés aux moteurs de recherche
 scientifiques influencent ce que les chercheur·e·s voient, lisent et
@@ -477,7 +477,7 @@ GML (&lt;a href="#ref_subramonyambridginggulfenvisioning2024" id="anchor_subramo
     <category term="ieml"/>
   </entry>
   <entry>
-    <id>/numero/corpus-crieur-test/article/pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue/</id>
+    <id>https://alexiaschn.github.io/crieur-perso-test/numero/corpus-crieur-test/article/pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue/</id>
     <title>Pourquoi le premier jeu de l&amp;#39;imitation n&amp;#39;a jamais été joué</title>
     <updated>2026-05-11T00:00:00-04:00</updated>
     <author>
@@ -513,7 +513,7 @@ GML (&lt;a href="#ref_subramonyambridginggulfenvisioning2024" id="anchor_subramo
     <author>
       <name>Marcello Vitali-Rosati</name>
     </author>
-    <link href="/numero/corpus-crieur-test/article/pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue/"/>
+    <link href="https://alexiaschn.github.io/crieur-perso-test/numero/corpus-crieur-test/article/pourquoi-le-premier-jeu-de-limitation-na-jamais-ete-joue/"/>
     <summary type="html">&lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Dans &lt;strong&gt;Computing Machinery and Intelligence&lt;/strong&gt;,
 (&lt;a href="#ref_turingcomputingmachineryintelligence1950" id="anchor_turingcomputingmachineryintelligence1950"&gt;Turing, 1950&lt;/a&gt;) a présenté ce qui est devenu

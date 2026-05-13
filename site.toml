@@ -27,7 +27,7 @@ ids = [
 title = "Crieur Perso Test 1"
 
 ## Racine de l'URL de votre site avec un / final, par exemple, https://crieur.org/ (recommandé).
-# base-url = "https://crieur-perso-test.org/"
+base-url = "https://alexiaschn.github.io/crieur-perso-test/"
 
 ## Chemin vers des templates dédiés
 ## Vous pouvez reprendre le template général base.html et d'autres sur le dépôt public du Crieur :
